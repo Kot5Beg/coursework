@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ювелирная_мастерская
 {
-    public partial class Form1 : Form
+    public partial class Security : Form
     {
-        public Form1()
+        public Security()
         {
             InitializeComponent();
         }

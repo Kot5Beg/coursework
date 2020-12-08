@@ -1,6 +1,6 @@
 ﻿namespace Ювелирная_мастерская
 {
-    partial class Form1
+    partial class Security
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -28,10 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // Security
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(356, 429);
+            this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.Name = "Security";
+            this.Text = "Авторизация";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
