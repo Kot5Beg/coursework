@@ -12,9 +12,85 @@ namespace Ювелирная_мастерская
 {
     public partial class Main : Form
     {
+        public static DataTable res;
         public Main()
         {
             InitializeComponent();
+            label6.Text = Manager.surname;
+            label7.Text = Manager.name;
+            label8.Text = Manager.patronymic;
+        }
+
+        public static void Loading(string query, DataGridView grid)
+        {
+            res = DataBaseWork.Load(query);
+            grid.DataSource = res;
+        }
+
+        private void Menu_Selected(object sender, TabControlEventArgs e)
+        {
+            if(Menu.SelectedTab == ClientPage)
+            {
+                string client = "SELECT * FROM CLIENTS";
+                Loading(client, ClientList);
+            }
+            else if(Menu.SelectedTab == ProductPage)
+            {
+                string product = "SELECT * FROM PRODUCT";
+                Loading(product, ProductList);
+            }
+            else if (Menu.SelectedTab == MaterialPage)
+            {
+                string product = "SELECT * FROM MATERIALS";
+                Loading(product, MaterialList);
+            }
+            else if (Menu.SelectedTab == TypePage)
+            {
+                string type = "SELECT * FROM PRODUCT_TYPE";
+                Loading(type, TypeList);
+            }
+            else if (Menu.SelectedTab == OrdersPage)
+            {
+                string order = "SELECT * FROM ORDERS";
+                Loading(order, OrdersList);
+            }
+            else if (Menu.SelectedTab == ContractPage)
+            {
+                string contract = "SELECT * FROM CONTRACTS WHERE ID_MANAGER = '"+Manager.id+"';";
+                Loading(contract, ContractList);
+            }
+        }
+
+        private void Main_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+        private void Add_Client_Click(object sender, EventArgs e)
+        {
+            Add_Client ac = new Add_Client();
+            ac.ShowDialog();
+        }
+
+        private void Delete_Client_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Deleting", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    Client.DeleteClient(ClientList);
+                    MessageBox.Show("Данные о клиенте удалены");
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void All_Client_Click(object sender, EventArgs e)
+        {
+            Upd_Client uc = new Upd_Client()
         }
     }
 }

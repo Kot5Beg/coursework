@@ -13,7 +13,6 @@ namespace Ювелирная_мастерская
 {
     public partial class Security : Form
     {
-        public static int id;
 
         public Security()
         {
@@ -63,7 +62,10 @@ namespace Ювелирная_мастерская
                 SqlDataReader read = sc.ExecuteReader();
                 while (read.Read())
                 {
-                    id = Convert.ToInt32(read.GetValue(0).ToString());
+                    Manager.id = Convert.ToInt32(read.GetValue(0).ToString());
+                    Manager.surname = Convert.ToString(read.GetValue(1).ToString());
+                    Manager.name = Convert.ToString(read.GetValue(2).ToString());
+                    Manager.patronymic = Convert.ToString(read.GetValue(3).ToString());
                 }
                 Main main = new Main();
                 main.Show();
