@@ -90,7 +90,22 @@ namespace Ювелирная_мастерская
 
         private void All_Client_Click(object sender, EventArgs e)
         {
-            Upd_Client uc = new Upd_Client()
+            string client = "SELECT * FROM CLIENTS";
+            Loading(client, ClientList);
+        }
+
+        private void Upd_Client_Click(object sender, EventArgs e)
+        {
+            List<string> client = new List<string>();
+            var number = ClientList.CurrentCell.RowIndex;
+            DataGridViewRow row = ClientList.Rows[number];
+            Upd_Client uc = new Upd_Client(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString(),
+                row.Cells[5].Value.ToString());
+            uc.ShowDialog();
         }
     }
 }

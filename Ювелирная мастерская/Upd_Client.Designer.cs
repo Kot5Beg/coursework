@@ -141,6 +141,7 @@
             this.Save_Client.TabIndex = 12;
             this.Save_Client.Text = "Сохранить";
             this.Save_Client.UseVisualStyleBackColor = true;
+            this.Save_Client.Click += new System.EventHandler(this.Save_Client_Click);
             // 
             // Upd_Client
             // 
