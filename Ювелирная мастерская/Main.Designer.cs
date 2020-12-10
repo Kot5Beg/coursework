@@ -42,7 +42,7 @@
             this.Upd_Client = new System.Windows.Forms.Button();
             this.Add_Client = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.SearchText = new System.Windows.Forms.TextBox();
             this.ClientList = new System.Windows.Forms.DataGridView();
             this.ProductPage = new System.Windows.Forms.TabPage();
             this.ProductList = new System.Windows.Forms.DataGridView();
@@ -66,6 +66,9 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.comboBox4 = new System.Windows.Forms.ComboBox();
+            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.label11 = new System.Windows.Forms.Label();
             this.Menu.SuspendLayout();
             this.PlaceOrder.SuspendLayout();
             this.ClientPage.SuspendLayout();
@@ -95,6 +98,7 @@
             this.Menu.Controls.Add(this.Report);
             this.Menu.Location = new System.Drawing.Point(20, 86);
             this.Menu.Margin = new System.Windows.Forms.Padding(5);
+            this.Menu.Multiline = true;
             this.Menu.Name = "Menu";
             this.Menu.SelectedIndex = 0;
             this.Menu.Size = new System.Drawing.Size(1015, 516);
@@ -186,12 +190,15 @@
             // 
             // ClientPage
             // 
+            this.ClientPage.Controls.Add(this.label11);
+            this.ClientPage.Controls.Add(this.checkBox2);
+            this.ClientPage.Controls.Add(this.checkBox1);
             this.ClientPage.Controls.Add(this.Delete_Client);
             this.ClientPage.Controls.Add(this.All_Client);
             this.ClientPage.Controls.Add(this.Upd_Client);
             this.ClientPage.Controls.Add(this.Add_Client);
             this.ClientPage.Controls.Add(this.label9);
-            this.ClientPage.Controls.Add(this.textBox1);
+            this.ClientPage.Controls.Add(this.SearchText);
             this.ClientPage.Controls.Add(this.ClientList);
             this.ClientPage.Location = new System.Drawing.Point(4, 30);
             this.ClientPage.Margin = new System.Windows.Forms.Padding(5);
@@ -204,9 +211,9 @@
             // 
             // Delete_Client
             // 
-            this.Delete_Client.Location = new System.Drawing.Point(145, 346);
+            this.Delete_Client.Location = new System.Drawing.Point(19, 430);
             this.Delete_Client.Name = "Delete_Client";
-            this.Delete_Client.Size = new System.Drawing.Size(150, 42);
+            this.Delete_Client.Size = new System.Drawing.Size(383, 42);
             this.Delete_Client.TabIndex = 6;
             this.Delete_Client.Text = " Удалить";
             this.Delete_Client.UseVisualStyleBackColor = true;
@@ -214,9 +221,9 @@
             // 
             // All_Client
             // 
-            this.All_Client.Location = new System.Drawing.Point(145, 298);
+            this.All_Client.Location = new System.Drawing.Point(19, 382);
             this.All_Client.Name = "All_Client";
-            this.All_Client.Size = new System.Drawing.Size(150, 42);
+            this.All_Client.Size = new System.Drawing.Size(383, 42);
             this.All_Client.TabIndex = 5;
             this.All_Client.Text = "Обновить";
             this.All_Client.UseVisualStyleBackColor = true;
@@ -224,9 +231,9 @@
             // 
             // Upd_Client
             // 
-            this.Upd_Client.Location = new System.Drawing.Point(145, 250);
+            this.Upd_Client.Location = new System.Drawing.Point(19, 334);
             this.Upd_Client.Name = "Upd_Client";
-            this.Upd_Client.Size = new System.Drawing.Size(150, 42);
+            this.Upd_Client.Size = new System.Drawing.Size(383, 42);
             this.Upd_Client.TabIndex = 4;
             this.Upd_Client.Text = "Изменить";
             this.Upd_Client.UseVisualStyleBackColor = true;
@@ -234,9 +241,9 @@
             // 
             // Add_Client
             // 
-            this.Add_Client.Location = new System.Drawing.Point(145, 202);
+            this.Add_Client.Location = new System.Drawing.Point(19, 286);
             this.Add_Client.Name = "Add_Client";
-            this.Add_Client.Size = new System.Drawing.Size(150, 42);
+            this.Add_Client.Size = new System.Drawing.Size(383, 42);
             this.Add_Client.TabIndex = 3;
             this.Add_Client.Text = "Добавить";
             this.Add_Client.UseVisualStyleBackColor = true;
@@ -245,19 +252,20 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(188, 17);
+            this.label9.Location = new System.Drawing.Point(184, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 21);
             this.label9.TabIndex = 2;
             this.label9.Text = "Поиск";
             // 
-            // textBox1
+            // SearchText
             // 
-            this.textBox1.Location = new System.Drawing.Point(10, 43);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(392, 29);
-            this.textBox1.TabIndex = 1;
+            this.SearchText.Location = new System.Drawing.Point(10, 43);
+            this.SearchText.Margin = new System.Windows.Forms.Padding(5);
+            this.SearchText.Name = "SearchText";
+            this.SearchText.Size = new System.Drawing.Size(392, 29);
+            this.SearchText.TabIndex = 1;
+            this.SearchText.TextChanged += new System.EventHandler(this.SearchText_TextChanged);
             // 
             // ClientList
             // 
@@ -470,6 +478,35 @@
             this.comboBox4.Size = new System.Drawing.Size(289, 29);
             this.comboBox4.TabIndex = 12;
             // 
+            // checkBox1
+            // 
+            this.checkBox1.AutoSize = true;
+            this.checkBox1.Location = new System.Drawing.Point(19, 129);
+            this.checkBox1.Name = "checkBox1";
+            this.checkBox1.Size = new System.Drawing.Size(102, 25);
+            this.checkBox1.TabIndex = 7;
+            this.checkBox1.Text = "checkBox1";
+            this.checkBox1.UseVisualStyleBackColor = true;
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(19, 161);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(102, 25);
+            this.checkBox2.TabIndex = 8;
+            this.checkBox2.Text = "checkBox2";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(15, 105);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(96, 21);
+            this.label11.TabIndex = 9;
+            this.label11.Text = "Сортировка";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -530,7 +567,7 @@
         private System.Windows.Forms.DataGridView TypeList;
         private System.Windows.Forms.DataGridView OrdersList;
         private System.Windows.Forms.DataGridView ContractList;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox SearchText;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -547,5 +584,8 @@
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.CheckBox checkBox1;
     }
 }

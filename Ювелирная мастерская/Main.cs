@@ -107,5 +107,10 @@ namespace Ювелирная_мастерская
                 row.Cells[5].Value.ToString());
             uc.ShowDialog();
         }
+
+        private void SearchText_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
