@@ -11,7 +11,7 @@ namespace Ювелирная_мастерская
 
     public static class DataBaseWork
     {
-        public static string connectString = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=jewerly_workshop;Integrated Security=True";
+        public static string connectString = @"Data Source=ADMIN\SQLEXPRESS;Initial Catalog=jewerly_workshop;Integrated Security=True";//оставить только её
         public static SqlConnection Con;
 
         public static void OpenCon()
