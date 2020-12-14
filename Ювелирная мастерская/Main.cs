@@ -112,5 +112,13 @@ namespace Ювелирная_мастерская
         {
             
         }
+
+        private void ProductList_RowEnter(object sender, DataGridViewCellEventArgs e)
+        {
+            var image = ProductList.Rows[e.RowIndex].Cells[4].Value.ToString();
+            ProductImage.ImageLocation = image;
+            ProductImage.SizeMode = PictureBoxSizeMode.StretchImage;
+            Console.WriteLine(image);
+        }
     }
 }
