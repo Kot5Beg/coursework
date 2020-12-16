@@ -44,9 +44,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.ClientPage = new System.Windows.Forms.TabPage();
+            this.patronymic_sort = new System.Windows.Forms.CheckBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
-            this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.name_sort = new System.Windows.Forms.CheckBox();
+            this.surname_sort = new System.Windows.Forms.CheckBox();
             this.Delete_Client = new System.Windows.Forms.Button();
             this.All_Client = new System.Windows.Forms.Button();
             this.Upd_Client = new System.Windows.Forms.Button();
@@ -55,6 +56,16 @@
             this.SearchText = new System.Windows.Forms.TextBox();
             this.ClientList = new System.Windows.Forms.DataGridView();
             this.ProductPage = new System.Windows.Forms.TabPage();
+            this.SelectType = new System.Windows.Forms.Button();
+            this.AlphaSort = new System.Windows.Forms.CheckBox();
+            this.TimeProdSort = new System.Windows.Forms.CheckBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.TypeCombo = new System.Windows.Forms.ComboBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.spt = new System.Windows.Forms.TextBox();
             this.ProductList = new System.Windows.Forms.DataGridView();
             this.MaterialPage = new System.Windows.Forms.TabPage();
             this.MaterialList = new System.Windows.Forms.DataGridView();
@@ -69,8 +80,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.ProductImage = new System.Windows.Forms.PictureBox();
-            this.panel1 = new System.Windows.Forms.Panel();
             this.Menu.SuspendLayout();
             this.PlaceOrder.SuspendLayout();
             this.ClientPage.SuspendLayout();
@@ -86,7 +95,6 @@
             this.ContractPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContractList)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductImage)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu
@@ -248,9 +256,10 @@
             // 
             // ClientPage
             // 
+            this.ClientPage.Controls.Add(this.patronymic_sort);
             this.ClientPage.Controls.Add(this.label11);
-            this.ClientPage.Controls.Add(this.checkBox2);
-            this.ClientPage.Controls.Add(this.checkBox1);
+            this.ClientPage.Controls.Add(this.name_sort);
+            this.ClientPage.Controls.Add(this.surname_sort);
             this.ClientPage.Controls.Add(this.Delete_Client);
             this.ClientPage.Controls.Add(this.All_Client);
             this.ClientPage.Controls.Add(this.Upd_Client);
@@ -267,6 +276,17 @@
             this.ClientPage.Text = "Клиенты";
             this.ClientPage.UseVisualStyleBackColor = true;
             // 
+            // patronymic_sort
+            // 
+            this.patronymic_sort.AutoSize = true;
+            this.patronymic_sort.Location = new System.Drawing.Point(19, 192);
+            this.patronymic_sort.Name = "patronymic_sort";
+            this.patronymic_sort.Size = new System.Drawing.Size(114, 25);
+            this.patronymic_sort.TabIndex = 10;
+            this.patronymic_sort.Text = "по отчеству";
+            this.patronymic_sort.UseVisualStyleBackColor = true;
+            this.patronymic_sort.CheckedChanged += new System.EventHandler(this.patronymic_sort_CheckedChanged);
+            // 
             // label11
             // 
             this.label11.AutoSize = true;
@@ -276,25 +296,27 @@
             this.label11.TabIndex = 9;
             this.label11.Text = "Сортировка";
             // 
-            // checkBox2
+            // name_sort
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(19, 161);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(102, 25);
-            this.checkBox2.TabIndex = 8;
-            this.checkBox2.Text = "checkBox2";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.name_sort.AutoSize = true;
+            this.name_sort.Location = new System.Drawing.Point(19, 161);
+            this.name_sort.Name = "name_sort";
+            this.name_sort.Size = new System.Drawing.Size(97, 25);
+            this.name_sort.TabIndex = 8;
+            this.name_sort.Text = "по имени";
+            this.name_sort.UseVisualStyleBackColor = true;
+            this.name_sort.CheckedChanged += new System.EventHandler(this.name_sort_CheckedChanged);
             // 
-            // checkBox1
+            // surname_sort
             // 
-            this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(19, 129);
-            this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(102, 25);
-            this.checkBox1.TabIndex = 7;
-            this.checkBox1.Text = "checkBox1";
-            this.checkBox1.UseVisualStyleBackColor = true;
+            this.surname_sort.AutoSize = true;
+            this.surname_sort.Location = new System.Drawing.Point(19, 129);
+            this.surname_sort.Name = "surname_sort";
+            this.surname_sort.Size = new System.Drawing.Size(116, 25);
+            this.surname_sort.TabIndex = 7;
+            this.surname_sort.Text = "по фамилии";
+            this.surname_sort.UseVisualStyleBackColor = true;
+            this.surname_sort.CheckedChanged += new System.EventHandler(this.surname_sort_CheckedChanged);
             // 
             // Delete_Client
             // 
@@ -365,8 +387,16 @@
             // 
             // ProductPage
             // 
-            this.ProductPage.Controls.Add(this.panel1);
-            this.ProductPage.Controls.Add(this.ProductImage);
+            this.ProductPage.Controls.Add(this.SelectType);
+            this.ProductPage.Controls.Add(this.AlphaSort);
+            this.ProductPage.Controls.Add(this.TimeProdSort);
+            this.ProductPage.Controls.Add(this.label16);
+            this.ProductPage.Controls.Add(this.label15);
+            this.ProductPage.Controls.Add(this.label14);
+            this.ProductPage.Controls.Add(this.TypeCombo);
+            this.ProductPage.Controls.Add(this.label13);
+            this.ProductPage.Controls.Add(this.label12);
+            this.ProductPage.Controls.Add(this.spt);
             this.ProductPage.Controls.Add(this.ProductList);
             this.ProductPage.Location = new System.Drawing.Point(4, 30);
             this.ProductPage.Margin = new System.Windows.Forms.Padding(5);
@@ -377,15 +407,107 @@
             this.ProductPage.Text = "Изделия";
             this.ProductPage.UseVisualStyleBackColor = true;
             // 
+            // SelectType
+            // 
+            this.SelectType.Location = new System.Drawing.Point(81, 154);
+            this.SelectType.Name = "SelectType";
+            this.SelectType.Size = new System.Drawing.Size(103, 36);
+            this.SelectType.TabIndex = 14;
+            this.SelectType.Text = "Выбрать";
+            this.SelectType.UseVisualStyleBackColor = true;
+            this.SelectType.Click += new System.EventHandler(this.SelectType_Click);
+            // 
+            // AlphaSort
+            // 
+            this.AlphaSort.AutoSize = true;
+            this.AlphaSort.Location = new System.Drawing.Point(24, 249);
+            this.AlphaSort.Name = "AlphaSort";
+            this.AlphaSort.Size = new System.Drawing.Size(88, 25);
+            this.AlphaSort.TabIndex = 13;
+            this.AlphaSort.Text = "алфавит";
+            this.AlphaSort.UseVisualStyleBackColor = true;
+            this.AlphaSort.CheckedChanged += new System.EventHandler(this.AlphaSort_CheckedChanged);
+            // 
+            // TimeProdSort
+            // 
+            this.TimeProdSort.AutoSize = true;
+            this.TimeProdSort.Location = new System.Drawing.Point(24, 217);
+            this.TimeProdSort.Name = "TimeProdSort";
+            this.TimeProdSort.Size = new System.Drawing.Size(174, 25);
+            this.TimeProdSort.TabIndex = 12;
+            this.TimeProdSort.Text = "время изготовления";
+            this.TimeProdSort.UseVisualStyleBackColor = true;
+            this.TimeProdSort.CheckedChanged += new System.EventHandler(this.TimeProdSort_CheckedChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(20, 193);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(96, 21);
+            this.label16.TabIndex = 11;
+            this.label16.Text = "Сортировка";
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(10, 337);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(0, 21);
+            this.label15.TabIndex = 9;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(20, 110);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(98, 21);
+            this.label14.TabIndex = 8;
+            this.label14.Text = "Тип изделия";
+            // 
+            // TypeCombo
+            // 
+            this.TypeCombo.FormattingEnabled = true;
+            this.TypeCombo.Location = new System.Drawing.Point(140, 107);
+            this.TypeCombo.Name = "TypeCombo";
+            this.TypeCombo.Size = new System.Drawing.Size(121, 29);
+            this.TypeCombo.TabIndex = 7;
+            this.TypeCombo.SelectedValueChanged += new System.EventHandler(this.TypeCombo_SelectedValueChanged);
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(18, 87);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(98, 21);
+            this.label13.TabIndex = 6;
+            this.label13.Text = "Фильтрация";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(38, 30);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(54, 21);
+            this.label12.TabIndex = 3;
+            this.label12.Text = "Поиск";
+            // 
+            // spt
+            // 
+            this.spt.Location = new System.Drawing.Point(191, 27);
+            this.spt.Name = "spt";
+            this.spt.Size = new System.Drawing.Size(764, 29);
+            this.spt.TabIndex = 2;
+            this.spt.TextChanged += new System.EventHandler(this.spt_TextChanged);
+            // 
             // ProductList
             // 
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Location = new System.Drawing.Point(726, 240);
+            this.ProductList.Location = new System.Drawing.Point(276, 78);
             this.ProductList.Margin = new System.Windows.Forms.Padding(5);
             this.ProductList.Name = "ProductList";
-            this.ProductList.Size = new System.Drawing.Size(271, 232);
+            this.ProductList.Size = new System.Drawing.Size(731, 394);
             this.ProductList.TabIndex = 0;
-            this.ProductList.RowEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.ProductList_RowEnter);
             // 
             // MaterialPage
             // 
@@ -483,27 +605,24 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(101, 11);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(52, 21);
+            this.label6.Size = new System.Drawing.Size(0, 21);
             this.label6.TabIndex = 1;
-            this.label6.Text = "label6";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Location = new System.Drawing.Point(101, 32);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(52, 21);
+            this.label7.Size = new System.Drawing.Size(0, 21);
             this.label7.TabIndex = 2;
-            this.label7.Text = "label7";
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Location = new System.Drawing.Point(101, 53);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(52, 21);
+            this.label8.Size = new System.Drawing.Size(0, 21);
             this.label8.TabIndex = 3;
-            this.label8.Text = "label8";
             // 
             // pictureBox1
             // 
@@ -513,31 +632,16 @@
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
-            // ProductImage
-            // 
-            this.ProductImage.Location = new System.Drawing.Point(8, 8);
-            this.ProductImage.Name = "ProductImage";
-            this.ProductImage.Size = new System.Drawing.Size(291, 241);
-            this.ProductImage.TabIndex = 1;
-            this.ProductImage.TabStop = false;
-            // 
-            // panel1
-            // 
-            this.panel1.Location = new System.Drawing.Point(472, 8);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(207, 241);
-            this.panel1.TabIndex = 2;
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1049, 604);
+            this.ClientSize = new System.Drawing.Size(1038, 604);
+            this.Controls.Add(this.Menu);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.Menu);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Main";
@@ -550,6 +654,7 @@
             this.ClientPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ClientList)).EndInit();
             this.ProductPage.ResumeLayout(false);
+            this.ProductPage.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
             this.MaterialPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaterialList)).EndInit();
@@ -560,7 +665,6 @@
             this.ContractPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ContractList)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ProductImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -607,9 +711,18 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.CheckBox checkBox2;
-        private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.PictureBox ProductImage;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.CheckBox name_sort;
+        private System.Windows.Forms.CheckBox surname_sort;
+        private System.Windows.Forms.CheckBox patronymic_sort;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.TextBox spt;
+        private System.Windows.Forms.CheckBox AlphaSort;
+        private System.Windows.Forms.CheckBox TimeProdSort;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ComboBox TypeCombo;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Button SelectType;
     }
 }
