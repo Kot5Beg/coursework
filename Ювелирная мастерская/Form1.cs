@@ -61,7 +61,7 @@ namespace Ювелирная_мастерская
             string upd = String.Format("UPDATE {0} SET MANAGER_SURNAME = '{1}', MANAGER_NAME = '{2}', MANAGER_PATRONYMIC = '{3}',MANAGER_ADDRESS = '{4}',MANAGER_PHONE = '{5}',MANAGER_SALARY = '{6}',MANAGER_LOGIN = '{7}', MANAGER_PASSWORD = '{8}' WHERE ID = '{9}'", "MANAGERS", SurnameText.Text, NameText.Text, PatronymicText.Text, AddressText.Text, PhoneText.Text, SalaryText.Text, LoginText.Text, PasswordText.Text, id);
             SqlCommand sc = new SqlCommand(upd, DataBaseWork.Con);
             sc.ExecuteNonQuery();
-            MessageBox.Show("Успех!");
+            MessageBox.Show("Данные менеджера успешно изменены.");
             DataBaseWork.CloseConnection();
             
         }

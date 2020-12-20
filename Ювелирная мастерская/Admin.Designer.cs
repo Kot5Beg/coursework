@@ -30,49 +30,50 @@
         {
             this.AdminPanel = new System.Windows.Forms.TabControl();
             this.Managers = new System.Windows.Forms.TabPage();
-            this.Masters = new System.Windows.Forms.TabPage();
-            this.ManagerList = new System.Windows.Forms.DataGridView();
-            this.MasterList = new System.Windows.Forms.DataGridView();
-            this.Products = new System.Windows.Forms.TabPage();
-            this.Materials = new System.Windows.Forms.TabPage();
-            this.Products_Type = new System.Windows.Forms.TabPage();
-            this.Qualification = new System.Windows.Forms.TabPage();
-            this.ManagersWork = new System.Windows.Forms.TabPage();
-            this.WorkMasters = new System.Windows.Forms.TabPage();
-            this.Add_Manager = new System.Windows.Forms.Button();
-            this.Update_Manager = new System.Windows.Forms.Button();
             this.Delete_Manager = new System.Windows.Forms.Button();
-            this.Add_Master = new System.Windows.Forms.Button();
-            this.Update_Master = new System.Windows.Forms.Button();
+            this.Update_Manager = new System.Windows.Forms.Button();
+            this.Add_Manager = new System.Windows.Forms.Button();
+            this.ManagerList = new System.Windows.Forms.DataGridView();
+            this.Masters = new System.Windows.Forms.TabPage();
             this.Delete_Master = new System.Windows.Forms.Button();
-            this.QualList = new System.Windows.Forms.DataGridView();
-            this.Add_Qual = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.Update_Master = new System.Windows.Forms.Button();
+            this.Add_Master = new System.Windows.Forms.Button();
+            this.MasterList = new System.Windows.Forms.DataGridView();
+            this.Qualification = new System.Windows.Forms.TabPage();
             this.Delete_Qual = new System.Windows.Forms.Button();
-            this.ProductList = new System.Windows.Forms.DataGridView();
-            this.Add_Product = new System.Windows.Forms.Button();
-            this.Update_Product = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.Add_Qual = new System.Windows.Forms.Button();
+            this.QualList = new System.Windows.Forms.DataGridView();
+            this.Products = new System.Windows.Forms.TabPage();
             this.Delete_Product = new System.Windows.Forms.Button();
+            this.Update_Product = new System.Windows.Forms.Button();
+            this.Add_Product = new System.Windows.Forms.Button();
+            this.ProductList = new System.Windows.Forms.DataGridView();
+            this.Materials = new System.Windows.Forms.TabPage();
             this.button1 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.MaterialList = new System.Windows.Forms.DataGridView();
+            this.Products_Type = new System.Windows.Forms.TabPage();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.TypeList = new System.Windows.Forms.DataGridView();
+            this.ManagersWork = new System.Windows.Forms.TabPage();
+            this.WorkMasters = new System.Windows.Forms.TabPage();
+            this.button8 = new System.Windows.Forms.Button();
             this.AdminPanel.SuspendLayout();
             this.Managers.SuspendLayout();
-            this.Masters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ManagerList)).BeginInit();
+            this.Masters.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MasterList)).BeginInit();
-            this.Products.SuspendLayout();
-            this.Materials.SuspendLayout();
-            this.Products_Type.SuspendLayout();
             this.Qualification.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.QualList)).BeginInit();
+            this.Products.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).BeginInit();
+            this.Materials.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MaterialList)).BeginInit();
+            this.Products_Type.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TypeList)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,6 +110,48 @@
             this.Managers.Text = "Менеджеры";
             this.Managers.UseVisualStyleBackColor = true;
             // 
+            // Delete_Manager
+            // 
+            this.Delete_Manager.Location = new System.Drawing.Point(791, 104);
+            this.Delete_Manager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Delete_Manager.Name = "Delete_Manager";
+            this.Delete_Manager.Size = new System.Drawing.Size(112, 37);
+            this.Delete_Manager.TabIndex = 3;
+            this.Delete_Manager.Text = "Удалить";
+            this.Delete_Manager.UseVisualStyleBackColor = true;
+            this.Delete_Manager.Click += new System.EventHandler(this.Delete_Manager_Click);
+            // 
+            // Update_Manager
+            // 
+            this.Update_Manager.Location = new System.Drawing.Point(791, 57);
+            this.Update_Manager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Update_Manager.Name = "Update_Manager";
+            this.Update_Manager.Size = new System.Drawing.Size(112, 37);
+            this.Update_Manager.TabIndex = 2;
+            this.Update_Manager.Text = "Изменить";
+            this.Update_Manager.UseVisualStyleBackColor = true;
+            this.Update_Manager.Click += new System.EventHandler(this.Update_Manager_Click);
+            // 
+            // Add_Manager
+            // 
+            this.Add_Manager.Location = new System.Drawing.Point(791, 10);
+            this.Add_Manager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Add_Manager.Name = "Add_Manager";
+            this.Add_Manager.Size = new System.Drawing.Size(112, 37);
+            this.Add_Manager.TabIndex = 1;
+            this.Add_Manager.Text = "Добавить";
+            this.Add_Manager.UseVisualStyleBackColor = true;
+            this.Add_Manager.Click += new System.EventHandler(this.Add_Manager_Click);
+            // 
+            // ManagerList
+            // 
+            this.ManagerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ManagerList.Location = new System.Drawing.Point(9, 10);
+            this.ManagerList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ManagerList.Name = "ManagerList";
+            this.ManagerList.Size = new System.Drawing.Size(774, 478);
+            this.ManagerList.TabIndex = 0;
+            // 
             // Masters
             // 
             this.Masters.Controls.Add(this.Delete_Master);
@@ -124,14 +167,33 @@
             this.Masters.Text = "Мастера";
             this.Masters.UseVisualStyleBackColor = true;
             // 
-            // ManagerList
+            // Delete_Master
             // 
-            this.ManagerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ManagerList.Location = new System.Drawing.Point(9, 10);
-            this.ManagerList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ManagerList.Name = "ManagerList";
-            this.ManagerList.Size = new System.Drawing.Size(774, 478);
-            this.ManagerList.TabIndex = 0;
+            this.Delete_Master.Location = new System.Drawing.Point(682, 434);
+            this.Delete_Master.Name = "Delete_Master";
+            this.Delete_Master.Size = new System.Drawing.Size(110, 49);
+            this.Delete_Master.TabIndex = 3;
+            this.Delete_Master.Text = "Удалить";
+            this.Delete_Master.UseVisualStyleBackColor = true;
+            // 
+            // Update_Master
+            // 
+            this.Update_Master.Location = new System.Drawing.Point(377, 434);
+            this.Update_Master.Name = "Update_Master";
+            this.Update_Master.Size = new System.Drawing.Size(139, 49);
+            this.Update_Master.TabIndex = 2;
+            this.Update_Master.Text = "Изменить";
+            this.Update_Master.UseVisualStyleBackColor = true;
+            // 
+            // Add_Master
+            // 
+            this.Add_Master.Location = new System.Drawing.Point(156, 434);
+            this.Add_Master.Name = "Add_Master";
+            this.Add_Master.Size = new System.Drawing.Size(102, 49);
+            this.Add_Master.TabIndex = 1;
+            this.Add_Master.Text = "Добавить";
+            this.Add_Master.UseVisualStyleBackColor = true;
+            this.Add_Master.Click += new System.EventHandler(this.Add_Master_Click);
             // 
             // MasterList
             // 
@@ -139,8 +201,61 @@
             this.MasterList.Location = new System.Drawing.Point(9, 10);
             this.MasterList.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MasterList.Name = "MasterList";
-            this.MasterList.Size = new System.Drawing.Size(950, 541);
+            this.MasterList.Size = new System.Drawing.Size(950, 377);
             this.MasterList.TabIndex = 0;
+            this.MasterList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MasterList_CellContentClick);
+            // 
+            // Qualification
+            // 
+            this.Qualification.Controls.Add(this.Delete_Qual);
+            this.Qualification.Controls.Add(this.button2);
+            this.Qualification.Controls.Add(this.Add_Qual);
+            this.Qualification.Controls.Add(this.QualList);
+            this.Qualification.Location = new System.Drawing.Point(4, 30);
+            this.Qualification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Qualification.Name = "Qualification";
+            this.Qualification.Size = new System.Drawing.Size(1019, 516);
+            this.Qualification.TabIndex = 5;
+            this.Qualification.Text = "Квалификации мастеров";
+            this.Qualification.UseVisualStyleBackColor = true;
+            // 
+            // Delete_Qual
+            // 
+            this.Delete_Qual.Location = new System.Drawing.Point(666, 101);
+            this.Delete_Qual.Name = "Delete_Qual";
+            this.Delete_Qual.Size = new System.Drawing.Size(101, 36);
+            this.Delete_Qual.TabIndex = 3;
+            this.Delete_Qual.Text = "Удалить";
+            this.Delete_Qual.UseVisualStyleBackColor = true;
+            this.Delete_Qual.Click += new System.EventHandler(this.Delete_Qual_Click);
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(666, 59);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(101, 36);
+            this.button2.TabIndex = 2;
+            this.button2.Text = "Изменить";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Add_Qual
+            // 
+            this.Add_Qual.Location = new System.Drawing.Point(666, 17);
+            this.Add_Qual.Name = "Add_Qual";
+            this.Add_Qual.Size = new System.Drawing.Size(101, 36);
+            this.Add_Qual.TabIndex = 1;
+            this.Add_Qual.Text = "Добавить";
+            this.Add_Qual.UseVisualStyleBackColor = true;
+            this.Add_Qual.Click += new System.EventHandler(this.Add_Qual_Click);
+            // 
+            // QualList
+            // 
+            this.QualList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.QualList.Location = new System.Drawing.Point(18, 17);
+            this.QualList.Name = "QualList";
+            this.QualList.Size = new System.Drawing.Size(633, 458);
+            this.QualList.TabIndex = 0;
             // 
             // Products
             // 
@@ -157,6 +272,42 @@
             this.Products.Text = "Изделия";
             this.Products.UseVisualStyleBackColor = true;
             // 
+            // Delete_Product
+            // 
+            this.Delete_Product.Location = new System.Drawing.Point(775, 147);
+            this.Delete_Product.Name = "Delete_Product";
+            this.Delete_Product.Size = new System.Drawing.Size(105, 33);
+            this.Delete_Product.TabIndex = 3;
+            this.Delete_Product.Text = "Удалить";
+            this.Delete_Product.UseVisualStyleBackColor = true;
+            // 
+            // Update_Product
+            // 
+            this.Update_Product.Location = new System.Drawing.Point(775, 92);
+            this.Update_Product.Name = "Update_Product";
+            this.Update_Product.Size = new System.Drawing.Size(105, 33);
+            this.Update_Product.TabIndex = 2;
+            this.Update_Product.Text = "Изменить";
+            this.Update_Product.UseVisualStyleBackColor = true;
+            // 
+            // Add_Product
+            // 
+            this.Add_Product.Location = new System.Drawing.Point(775, 41);
+            this.Add_Product.Name = "Add_Product";
+            this.Add_Product.Size = new System.Drawing.Size(105, 33);
+            this.Add_Product.TabIndex = 1;
+            this.Add_Product.Text = "Добавить";
+            this.Add_Product.UseVisualStyleBackColor = true;
+            this.Add_Product.Click += new System.EventHandler(this.Add_Product_Click);
+            // 
+            // ProductList
+            // 
+            this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.ProductList.Location = new System.Drawing.Point(7, 17);
+            this.ProductList.Name = "ProductList";
+            this.ProductList.Size = new System.Drawing.Size(741, 475);
+            this.ProductList.TabIndex = 0;
+            // 
             // Materials
             // 
             this.Materials.Controls.Add(this.button1);
@@ -171,6 +322,44 @@
             this.Materials.TabIndex = 3;
             this.Materials.Text = "Материалы";
             this.Materials.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(841, 151);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(105, 33);
+            this.button1.TabIndex = 7;
+            this.button1.Text = "Удалить";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(841, 96);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(105, 33);
+            this.button3.TabIndex = 6;
+            this.button3.Text = "Изменить";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(841, 45);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(105, 33);
+            this.button4.TabIndex = 5;
+            this.button4.Text = "Добавить";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // MaterialList
+            // 
+            this.MaterialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.MaterialList.Location = new System.Drawing.Point(73, 21);
+            this.MaterialList.Name = "MaterialList";
+            this.MaterialList.Size = new System.Drawing.Size(741, 475);
+            this.MaterialList.TabIndex = 4;
             // 
             // Products_Type
             // 
@@ -187,19 +376,43 @@
             this.Products_Type.Text = "Типы изделий";
             this.Products_Type.UseVisualStyleBackColor = true;
             // 
-            // Qualification
+            // button5
             // 
-            this.Qualification.Controls.Add(this.Delete_Qual);
-            this.Qualification.Controls.Add(this.button2);
-            this.Qualification.Controls.Add(this.Add_Qual);
-            this.Qualification.Controls.Add(this.QualList);
-            this.Qualification.Location = new System.Drawing.Point(4, 30);
-            this.Qualification.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Qualification.Name = "Qualification";
-            this.Qualification.Size = new System.Drawing.Size(1019, 516);
-            this.Qualification.TabIndex = 5;
-            this.Qualification.Text = "Квалификации мастеров";
-            this.Qualification.UseVisualStyleBackColor = true;
+            this.button5.Location = new System.Drawing.Point(841, 145);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(105, 33);
+            this.button5.TabIndex = 7;
+            this.button5.Text = "Удалить";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
+            // button6
+            // 
+            this.button6.Location = new System.Drawing.Point(841, 96);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(105, 33);
+            this.button6.TabIndex = 6;
+            this.button6.Text = "Изменить";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button7
+            // 
+            this.button7.Location = new System.Drawing.Point(841, 45);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(105, 33);
+            this.button7.TabIndex = 5;
+            this.button7.Text = "Добавить";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click);
+            // 
+            // TypeList
+            // 
+            this.TypeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TypeList.Location = new System.Drawing.Point(73, 21);
+            this.TypeList.Name = "TypeList";
+            this.TypeList.Size = new System.Drawing.Size(741, 475);
+            this.TypeList.TabIndex = 4;
             // 
             // ManagersWork
             // 
@@ -221,211 +434,22 @@
             this.WorkMasters.Text = "Контроль работы мастеров";
             this.WorkMasters.UseVisualStyleBackColor = true;
             // 
-            // Add_Manager
+            // button8
             // 
-            this.Add_Manager.Location = new System.Drawing.Point(791, 10);
-            this.Add_Manager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Add_Manager.Name = "Add_Manager";
-            this.Add_Manager.Size = new System.Drawing.Size(112, 37);
-            this.Add_Manager.TabIndex = 1;
-            this.Add_Manager.Text = "Добавить";
-            this.Add_Manager.UseVisualStyleBackColor = true;
-            this.Add_Manager.Click += new System.EventHandler(this.Add_Manager_Click);
-            // 
-            // Update_Manager
-            // 
-            this.Update_Manager.Location = new System.Drawing.Point(791, 57);
-            this.Update_Manager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Update_Manager.Name = "Update_Manager";
-            this.Update_Manager.Size = new System.Drawing.Size(112, 37);
-            this.Update_Manager.TabIndex = 2;
-            this.Update_Manager.Text = "Изменить";
-            this.Update_Manager.UseVisualStyleBackColor = true;
-            this.Update_Manager.Click += new System.EventHandler(this.Update_Manager_Click);
-            // 
-            // Delete_Manager
-            // 
-            this.Delete_Manager.Location = new System.Drawing.Point(791, 104);
-            this.Delete_Manager.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Delete_Manager.Name = "Delete_Manager";
-            this.Delete_Manager.Size = new System.Drawing.Size(112, 37);
-            this.Delete_Manager.TabIndex = 3;
-            this.Delete_Manager.Text = "Удалить";
-            this.Delete_Manager.UseVisualStyleBackColor = true;
-            this.Delete_Manager.Click += new System.EventHandler(this.Delete_Manager_Click);
-            // 
-            // Add_Master
-            // 
-            this.Add_Master.Location = new System.Drawing.Point(148, 559);
-            this.Add_Master.Name = "Add_Master";
-            this.Add_Master.Size = new System.Drawing.Size(102, 32);
-            this.Add_Master.TabIndex = 1;
-            this.Add_Master.Text = "Добавить";
-            this.Add_Master.UseVisualStyleBackColor = true;
-            // 
-            // Update_Master
-            // 
-            this.Update_Master.Location = new System.Drawing.Point(366, 559);
-            this.Update_Master.Name = "Update_Master";
-            this.Update_Master.Size = new System.Drawing.Size(139, 32);
-            this.Update_Master.TabIndex = 2;
-            this.Update_Master.Text = "Изменить";
-            this.Update_Master.UseVisualStyleBackColor = true;
-            // 
-            // Delete_Master
-            // 
-            this.Delete_Master.Location = new System.Drawing.Point(711, 559);
-            this.Delete_Master.Name = "Delete_Master";
-            this.Delete_Master.Size = new System.Drawing.Size(110, 32);
-            this.Delete_Master.TabIndex = 3;
-            this.Delete_Master.Text = "Удалить";
-            this.Delete_Master.UseVisualStyleBackColor = true;
-            // 
-            // QualList
-            // 
-            this.QualList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.QualList.Location = new System.Drawing.Point(18, 17);
-            this.QualList.Name = "QualList";
-            this.QualList.Size = new System.Drawing.Size(633, 458);
-            this.QualList.TabIndex = 0;
-            // 
-            // Add_Qual
-            // 
-            this.Add_Qual.Location = new System.Drawing.Point(715, 50);
-            this.Add_Qual.Name = "Add_Qual";
-            this.Add_Qual.Size = new System.Drawing.Size(101, 36);
-            this.Add_Qual.TabIndex = 1;
-            this.Add_Qual.Text = "Добавить";
-            this.Add_Qual.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(715, 92);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(101, 36);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Изменить";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // Delete_Qual
-            // 
-            this.Delete_Qual.Location = new System.Drawing.Point(715, 134);
-            this.Delete_Qual.Name = "Delete_Qual";
-            this.Delete_Qual.Size = new System.Drawing.Size(101, 36);
-            this.Delete_Qual.TabIndex = 3;
-            this.Delete_Qual.Text = "Удалить";
-            this.Delete_Qual.UseVisualStyleBackColor = true;
-            // 
-            // ProductList
-            // 
-            this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Location = new System.Drawing.Point(7, 17);
-            this.ProductList.Name = "ProductList";
-            this.ProductList.Size = new System.Drawing.Size(741, 475);
-            this.ProductList.TabIndex = 0;
-            // 
-            // Add_Product
-            // 
-            this.Add_Product.Location = new System.Drawing.Point(775, 41);
-            this.Add_Product.Name = "Add_Product";
-            this.Add_Product.Size = new System.Drawing.Size(105, 33);
-            this.Add_Product.TabIndex = 1;
-            this.Add_Product.Text = "Добавить";
-            this.Add_Product.UseVisualStyleBackColor = true;
-            // 
-            // Update_Product
-            // 
-            this.Update_Product.Location = new System.Drawing.Point(775, 92);
-            this.Update_Product.Name = "Update_Product";
-            this.Update_Product.Size = new System.Drawing.Size(105, 33);
-            this.Update_Product.TabIndex = 2;
-            this.Update_Product.Text = "Изменить";
-            this.Update_Product.UseVisualStyleBackColor = true;
-            // 
-            // Delete_Product
-            // 
-            this.Delete_Product.Location = new System.Drawing.Point(775, 147);
-            this.Delete_Product.Name = "Delete_Product";
-            this.Delete_Product.Size = new System.Drawing.Size(105, 33);
-            this.Delete_Product.TabIndex = 3;
-            this.Delete_Product.Text = "Удалить";
-            this.Delete_Product.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(841, 151);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(105, 33);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Удалить";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(841, 96);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(105, 33);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Изменить";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(841, 45);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(105, 33);
-            this.button4.TabIndex = 5;
-            this.button4.Text = "Добавить";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // MaterialList
-            // 
-            this.MaterialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MaterialList.Location = new System.Drawing.Point(73, 21);
-            this.MaterialList.Name = "MaterialList";
-            this.MaterialList.Size = new System.Drawing.Size(741, 475);
-            this.MaterialList.TabIndex = 4;
-            // 
-            // button5
-            // 
-            this.button5.Location = new System.Drawing.Point(841, 151);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(105, 33);
-            this.button5.TabIndex = 7;
-            this.button5.Text = "Удалить";
-            this.button5.UseVisualStyleBackColor = true;
-            // 
-            // button6
-            // 
-            this.button6.Location = new System.Drawing.Point(841, 96);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(105, 33);
-            this.button6.TabIndex = 6;
-            this.button6.Text = "Изменить";
-            this.button6.UseVisualStyleBackColor = true;
-            // 
-            // button7
-            // 
-            this.button7.Location = new System.Drawing.Point(841, 45);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(105, 33);
-            this.button7.TabIndex = 5;
-            this.button7.Text = "Добавить";
-            this.button7.UseVisualStyleBackColor = true;
-            // 
-            // TypeList
-            // 
-            this.TypeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TypeList.Location = new System.Drawing.Point(73, 21);
-            this.TypeList.Name = "TypeList";
-            this.TypeList.Size = new System.Drawing.Size(741, 475);
-            this.TypeList.TabIndex = 4;
+            this.button8.Location = new System.Drawing.Point(390, 574);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(261, 30);
+            this.button8.TabIndex = 1;
+            this.button8.Text = "Выйти из учётной записи";
+            this.button8.UseVisualStyleBackColor = true;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // Admin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1050, 570);
+            this.ClientSize = new System.Drawing.Size(1050, 616);
+            this.Controls.Add(this.button8);
             this.Controls.Add(this.AdminPanel);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -433,16 +457,16 @@
             this.Text = "Admin";
             this.AdminPanel.ResumeLayout(false);
             this.Managers.ResumeLayout(false);
-            this.Masters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ManagerList)).EndInit();
+            this.Masters.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MasterList)).EndInit();
-            this.Products.ResumeLayout(false);
-            this.Materials.ResumeLayout(false);
-            this.Products_Type.ResumeLayout(false);
             this.Qualification.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.QualList)).EndInit();
+            this.Products.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ProductList)).EndInit();
+            this.Materials.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MaterialList)).EndInit();
+            this.Products_Type.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.TypeList)).EndInit();
             this.ResumeLayout(false);
 
@@ -483,5 +507,6 @@
         private System.Windows.Forms.DataGridView TypeList;
         private System.Windows.Forms.TabPage ManagersWork;
         private System.Windows.Forms.TabPage WorkMasters;
+        private System.Windows.Forms.Button button8;
     }
 }
