@@ -52,6 +52,25 @@
     <Compile Include="Add_Client.Designer.cs">
       <DependentUpon>Add_Client.cs</DependentUpon>
     </Compile>
+    <Compile Include="Add_Manager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_Manager.Designer.cs">
+      <DependentUpon>Add_Manager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Product.cs" />
     <Compile Include="Client.cs" />
     <Compile Include="DataBaseWork.cs" />
     <Compile Include="Main.cs">
@@ -77,6 +96,15 @@
     </Compile>
     <EmbeddedResource Include="Add_Client.resx">
       <DependentUpon>Add_Client.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Add_Manager.resx">
+      <DependentUpon>Add_Manager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Main.resx">
       <DependentUpon>Main.cs</DependentUpon>

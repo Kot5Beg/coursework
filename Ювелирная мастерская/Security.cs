@@ -51,11 +51,7 @@ namespace Ювелирная_мастерская
 
             if (i == 0)
             {
-                if (MessageBox.Show("Ошибка авторизации\nПопробуйте ещё раз!") == DialogResult.OK)
-                {
-                    Focus();
-                    CleanText();
-                }
+                AdminInput();
             }
             else
             {
@@ -104,6 +100,40 @@ namespace Ювелирная_мастерская
         private void ClearBox_Click(object sender, EventArgs e)
         {
             CleanText();
+        }
+
+        private void AdminInput()
+        {
+            string login = Convert.ToString(LoginText.Text);
+            string password = Convert.ToString(PassText.Text);
+            int a;
+
+            string admin = "SELECT * FROM ADMIN WHERE ADMIN_LOGIN = '" + login + "' AND ADMIN_PASSWORD = '" + password + "';";
+
+            SqlCommand sc = new SqlCommand(admin, DataBaseWork.Con);
+
+            DataTable dt = new DataTable();
+            SqlDataAdapter sda = new SqlDataAdapter(sc);
+
+
+            sda.Fill(dt);
+            a = Convert.ToInt32(dt.Rows.Count.ToString());
+
+            if (a == 0)
+            {
+                if (MessageBox.Show("Ошибка авторизации\nПопробуйте ещё раз!") == DialogResult.OK)
+                {
+                    Focus();
+                    CleanText();
+                }
+            }
+            else
+            {
+                SqlDataReader read = sc.ExecuteReader();
+                Admin AdminForm = new Admin();
+                AdminForm.Show();
+                Hide();
+            }
         }
     }
 }

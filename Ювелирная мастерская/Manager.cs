@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.SqlClient;
+using System.Windows.Forms;
 
 namespace Ювелирная_мастерская
 {
@@ -30,6 +32,24 @@ namespace Ювелирная_мастерская
             Salary = salary;
             Login = login;
             Password = password;
+        }
+
+        public static void AddManager(string surname, string name, string patronimyc, string address, string phone, string salary, string login, string password)
+        {
+            DataBaseWork.OpenCon();
+            string add = String.Format("INSERT INTO MANAGERS (MANAGER_SURNAME,MANAGER_NAME,MANAGER_PATRONYMIC,MANAGER_ADDRESS, MANAGER_PHONE, MANAGER_SALARY,MANAGER_LOGIN, MANAGER_PASSWORD) VALUES ('" + surname + "', '" + name + "', '" + patronimyc + "', '" + address + "', '" + phone + "', '"+salary+"', '"+login+"', '"+password+"')");
+            SqlCommand sc = new SqlCommand(add, DataBaseWork.Con);
+            sc.ExecuteNonQuery();
+            DataBaseWork.CloseConnection();
+        }
+
+        public static void DeleteManager(DataGridView grid)
+        {
+            DataBaseWork.OpenCon();
+            var num = (int)grid.CurrentRow.Cells["ID"].Value;
+            SqlCommand sc = new SqlCommand(String.Format("DELETE FROM MANAGERS WHERE ID = {0}", num), DataBaseWork.Con);
+            sc.ExecuteNonQuery();
+            DataBaseWork.CloseConnection();
         }
     }
 }

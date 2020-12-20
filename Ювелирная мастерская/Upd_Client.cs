@@ -22,7 +22,6 @@ namespace Ювелирная_мастерская
 
         public Upd_Client()
         {
-            
             InitializeComponent();
         }
 
