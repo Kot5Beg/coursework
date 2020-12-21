@@ -117,4 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label21.Text" xml:space="preserve">
+    <value>1. Общее количество заключённых договоров
+2. Средняя сумма заказов
+3. Самое популярное изделие, заказываемое у Вас
+4. Количество договоров, заключённых в определённую дату 
+(Примечание: выберите дату в поле)
+5. Максимальная сумма заказа
+6. Минимальная сумма заказа
+</value>
+  </data>
 </root>

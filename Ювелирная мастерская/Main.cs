@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Word = Microsoft.Office.Interop.Excel;
 
 namespace Ювелирная_мастерская
 {
@@ -324,6 +325,33 @@ namespace Ювелирная_мастерская
             sc.ExecuteNonQuery();
             DataBaseWork.CloseConnection();
             MessageBox.Show("Договор успешно добавлен");
+        }
+
+        private void ImportToExcel_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel.Application ExcelApp = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel.Workbook ExcelWorkBook;
+            Microsoft.Office.Interop.Excel.Worksheet ExcelWorkSheet;
+            ExcelWorkBook = ExcelApp.Workbooks.Add(System.Reflection.Missing.Value);
+            ExcelWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)ExcelWorkBook.Worksheets.get_Item(1);
+
+            for (int i = 0; i < ProductList.Rows.Count; i++)
+            {
+                for (int j = 0; j < ProductList.ColumnCount; j++)
+                {
+                    ExcelApp.Cells[i + 1, j + 1] = ProductList.Rows[i].Cells[j].Value;
+                }
+            }
+            ExcelApp.Visible = true;
+            ExcelApp.UserControl = true;
+        }
+
+        private void ReportStart_Click(object sender, EventArgs e)
+        {
+            string report = "SELECT COUNT (*) AS [Общее количество договоров] FROM CONTRACTS WHERE ID_MANAGER = '" + Manager.id + "'";
+            string report1 = "SELECT * FROM CONTRACTS WHERE ID_ORDER = (SELECT * FROM ORDERS) AND ID_MANAGER = '" + Manager.id + "'";
+            res = DataBaseWork.Load(report1);
+            ReportView.DataSource = res;
         }
     }
 }
