@@ -59,8 +59,6 @@
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.TypeList = new System.Windows.Forms.DataGridView();
-            this.ManagersWork = new System.Windows.Forms.TabPage();
-            this.WorkMasters = new System.Windows.Forms.TabPage();
             this.button8 = new System.Windows.Forms.Button();
             this.AdminPanel.SuspendLayout();
             this.Managers.SuspendLayout();
@@ -85,8 +83,6 @@
             this.AdminPanel.Controls.Add(this.Products);
             this.AdminPanel.Controls.Add(this.Materials);
             this.AdminPanel.Controls.Add(this.Products_Type);
-            this.AdminPanel.Controls.Add(this.ManagersWork);
-            this.AdminPanel.Controls.Add(this.WorkMasters);
             this.AdminPanel.Location = new System.Drawing.Point(18, 19);
             this.AdminPanel.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AdminPanel.Name = "AdminPanel";
@@ -175,6 +171,7 @@
             this.Delete_Master.TabIndex = 3;
             this.Delete_Master.Text = "Удалить";
             this.Delete_Master.UseVisualStyleBackColor = true;
+            this.Delete_Master.Click += new System.EventHandler(this.Delete_Master_Click);
             // 
             // Update_Master
             // 
@@ -415,26 +412,6 @@
             this.TypeList.Size = new System.Drawing.Size(741, 475);
             this.TypeList.TabIndex = 4;
             // 
-            // ManagersWork
-            // 
-            this.ManagersWork.Location = new System.Drawing.Point(4, 30);
-            this.ManagersWork.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ManagersWork.Name = "ManagersWork";
-            this.ManagersWork.Size = new System.Drawing.Size(1019, 516);
-            this.ManagersWork.TabIndex = 6;
-            this.ManagersWork.Text = "Контроль работы менеджеров";
-            this.ManagersWork.UseVisualStyleBackColor = true;
-            // 
-            // WorkMasters
-            // 
-            this.WorkMasters.Location = new System.Drawing.Point(4, 30);
-            this.WorkMasters.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.WorkMasters.Name = "WorkMasters";
-            this.WorkMasters.Size = new System.Drawing.Size(1019, 516);
-            this.WorkMasters.TabIndex = 7;
-            this.WorkMasters.Text = "Контроль работы мастеров";
-            this.WorkMasters.UseVisualStyleBackColor = true;
-            // 
             // button8
             // 
             this.button8.Location = new System.Drawing.Point(390, 574);
@@ -506,8 +483,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.DataGridView TypeList;
-        private System.Windows.Forms.TabPage ManagersWork;
-        private System.Windows.Forms.TabPage WorkMasters;
         private System.Windows.Forms.Button button8;
     }
 }

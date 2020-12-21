@@ -91,7 +91,8 @@ namespace Ювелирная_мастерская
 
         private void Add_Master_Click(object sender, EventArgs e)
         {
-            
+            AddMaster am = new AddMaster();
+            am.ShowDialog();
         }
 
         private void Add_Qual_Click(object sender, EventArgs e)
@@ -102,7 +103,8 @@ namespace Ювелирная_мастерская
 
         private void Add_Product_Click(object sender, EventArgs e)
         {
-            
+            AddProduct ap = new AddProduct();
+            ap.ShowDialog();
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -187,7 +189,28 @@ namespace Ювелирная_мастерская
 
         private void Update_Master_Click(object sender, EventArgs e)
         {
-            
+            List<string> master = new List<string>();
+            var number = MasterList.CurrentCell.RowIndex;
+            DataGridViewRow row = MasterList.Rows[number];
+            UpdMaster um = new UpdMaster(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString(),
+                row.Cells[4].Value.ToString(),
+                row.Cells[5].Value.ToString(),
+                row.Cells[6].Value.ToString(),
+                row.Cells[7].Value.ToString());
+            um.ShowDialog();
+        }
+
+        private void Delete_Master_Click(object sender, EventArgs e)
+        {
+            DataBaseWork.OpenCon();
+            var num = (int)MasterList.CurrentRow.Cells["ID"].Value;
+            SqlCommand sc = new SqlCommand(String.Format("DELETE FROM MASTERS WHERE ID = {0}", num), DataBaseWork.Con);
+            sc.ExecuteNonQuery();
+            DataBaseWork.CloseConnection();
+            MessageBox.Show("Данные о мастере успешно удалены");
         }
     }
 }
