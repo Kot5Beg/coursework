@@ -91,8 +91,7 @@ namespace Ювелирная_мастерская
 
         private void Add_Master_Click(object sender, EventArgs e)
         {
-            AddMaster am = new AddMaster();
-            am.ShowDialog();
+            
         }
 
         private void Add_Qual_Click(object sender, EventArgs e)
@@ -103,8 +102,7 @@ namespace Ювелирная_мастерская
 
         private void Add_Product_Click(object sender, EventArgs e)
         {
-            AddProduct ap = new AddProduct();
-            ap.ShowDialog();
+            
         }
 
         private void button4_Click(object sender, EventArgs e)
@@ -185,6 +183,11 @@ namespace Ювелирная_мастерская
             sc.ExecuteNonQuery();
             DataBaseWork.CloseConnection();
             MessageBox.Show("Тип изделий удален");
+        }
+
+        private void Update_Master_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

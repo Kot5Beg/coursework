@@ -184,6 +184,7 @@
             this.Update_Master.TabIndex = 2;
             this.Update_Master.Text = "Изменить";
             this.Update_Master.UseVisualStyleBackColor = true;
+            this.Update_Master.Click += new System.EventHandler(this.Update_Master_Click);
             // 
             // Add_Master
             // 

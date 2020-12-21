@@ -21,7 +21,7 @@ namespace Ювелирная_мастерская
             label6.Text = Manager.surname;
             label7.Text = Manager.name;
             label8.Text = Manager.patronymic;
-            
+            LoadCombo();
         }
 
         public static void Loading(string query, DataGridView grid)
@@ -241,6 +241,89 @@ namespace Ювелирная_мастерская
                 Loading(products, ProductList);
                 TimeProdSort.Enabled = true;
             }
+        }
+
+        private void ExitAccount_Click(object sender, EventArgs e)
+        {
+            Application.Restart();
+        }
+
+        private void LoadCombo()
+        {
+            DataBaseWork.OpenCon();
+
+            SqlCommand sc = new SqlCommand("SELECT * FROM PRODUCT", DataBaseWork.Con);
+            DataTable dt = new DataTable();
+            SqlDataAdapter da = new SqlDataAdapter(sc);
+            da.Fill(dt);
+            ProdList.DataSource = dt;
+            ProdList.DisplayMember = "APPELATION";
+            ProdList.ValueMember = "ID";
+            ProdList.SelectedIndex = 0;
+
+            SqlCommand sc1 = new SqlCommand("SELECT * FROM MATERIALS", DataBaseWork.Con);
+            DataTable dt1 = new DataTable();
+            SqlDataAdapter da1 = new SqlDataAdapter(sc1);
+            da1.Fill(dt1);
+            MatList.DataSource = dt1;
+            MatList.DisplayMember = "APPELATION";
+            MatList.ValueMember = "ID";
+            
+
+            SqlCommand sc2 = new SqlCommand("SELECT * FROM MASTERS", DataBaseWork.Con);
+            DataTable dt2 = new DataTable();
+            SqlDataAdapter da2 = new SqlDataAdapter(sc2);
+            da2.Fill(dt2);
+            MasList.DataSource = dt2;
+            MasList.DisplayMember = "MAS_SURNAME";
+            MasList.ValueMember = "ID";
+           
+
+            SqlCommand sc3 = new SqlCommand("SELECT * FROM CLIENTS", DataBaseWork.Con);
+            DataTable dt3 = new DataTable();
+            SqlDataAdapter da3 = new SqlDataAdapter(sc3);
+            da3.Fill(dt3);
+            CliList.DataSource = dt3;
+            CliList.DisplayMember = "C_SURNAME";
+            CliList.ValueMember = "ID";
+            CliList.SelectedIndex = 0;
+
+            SqlCommand sc4 = new SqlCommand("SELECT * FROM ORDERS", DataBaseWork.Con);
+            DataTable dt4 = new DataTable();
+            SqlDataAdapter da4 = new SqlDataAdapter(sc4);
+            da4.Fill(dt4);
+            OrderNum.DataSource = dt4;
+            OrderNum.DisplayMember = "ID";
+            OrderNum.ValueMember = "ID";
+            DataBaseWork.CloseConnection();
+        }
+
+        private void OrderBut_Click(object sender, EventArgs e)
+        {
+            int p = Convert.ToInt32(ProdList.SelectedValue);
+            int mat = Convert.ToInt32(MatList.SelectedValue);
+            int mas = Convert.ToInt32(MasList.SelectedValue);
+            decimal pr = Convert.ToDecimal(PriceEnd.Text);
+            string time = TimeProd.Text;
+            DataBaseWork.OpenCon();
+            string add = String.Format("INSERT INTO ORDERS (ID_PRODUCT,ID_MATERIAL, ID_MASTER, PRICE, TIME_PROD ) VALUES (" + p + ", " + mat + ", " + mas + ", " + pr + ", '" + time + "')");
+            SqlCommand sc = new SqlCommand(add, DataBaseWork.Con);
+            sc.ExecuteNonQuery();
+            DataBaseWork.CloseConnection();
+            MessageBox.Show("Заказ успешно добавлен");
+        }
+
+        private void ContrBut_Click(object sender, EventArgs e)
+        {
+            int o = Convert.ToInt32(OrderNum.SelectedValue);
+            int client = Convert.ToInt32(CliList.SelectedValue);
+            
+            DataBaseWork.OpenCon();
+            string add = String.Format("INSERT INTO CONTRACTS (ID_ORDER,ID_CLIENT, ID_MANAGER, DATE_CONTR) VALUES (" + o + ", " + client + ", " + Manager.id + ", '"+ DateContr.Value.Date + "')");
+            SqlCommand sc = new SqlCommand(add, DataBaseWork.Con);
+            sc.ExecuteNonQuery();
+            DataBaseWork.CloseConnection();
+            MessageBox.Show("Договор успешно добавлен");
         }
     }
 }

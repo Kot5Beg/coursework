@@ -30,14 +30,12 @@
         {
             this.Menu = new System.Windows.Forms.TabControl();
             this.PlaceOrder = new System.Windows.Forms.TabPage();
-            this.comboBox4 = new System.Windows.Forms.ComboBox();
-            this.label10 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.comboBox3 = new System.Windows.Forms.ComboBox();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TimeProd = new System.Windows.Forms.TextBox();
+            this.MasList = new System.Windows.Forms.ComboBox();
+            this.MatList = new System.Windows.Forms.ComboBox();
+            this.ProdList = new System.Windows.Forms.ComboBox();
+            this.PriceEnd = new System.Windows.Forms.TextBox();
+            this.OrderBut = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -79,7 +77,14 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ExitAccount = new System.Windows.Forms.Button();
+            this.label17 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.CliList = new System.Windows.Forms.ComboBox();
+            this.DateContr = new System.Windows.Forms.DateTimePicker();
+            this.OrderNum = new System.Windows.Forms.ComboBox();
+            this.label18 = new System.Windows.Forms.Label();
+            this.ContrBut = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.PlaceOrder.SuspendLayout();
             this.ClientPage.SuspendLayout();
@@ -94,7 +99,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrdersList)).BeginInit();
             this.ContractPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ContractList)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // Menu
@@ -118,14 +122,19 @@
             // 
             // PlaceOrder
             // 
-            this.PlaceOrder.Controls.Add(this.comboBox4);
+            this.PlaceOrder.Controls.Add(this.ContrBut);
+            this.PlaceOrder.Controls.Add(this.label18);
+            this.PlaceOrder.Controls.Add(this.OrderNum);
+            this.PlaceOrder.Controls.Add(this.label17);
+            this.PlaceOrder.Controls.Add(this.DateContr);
+            this.PlaceOrder.Controls.Add(this.CliList);
             this.PlaceOrder.Controls.Add(this.label10);
-            this.PlaceOrder.Controls.Add(this.textBox3);
-            this.PlaceOrder.Controls.Add(this.comboBox3);
-            this.PlaceOrder.Controls.Add(this.comboBox2);
-            this.PlaceOrder.Controls.Add(this.comboBox1);
-            this.PlaceOrder.Controls.Add(this.textBox2);
-            this.PlaceOrder.Controls.Add(this.button1);
+            this.PlaceOrder.Controls.Add(this.TimeProd);
+            this.PlaceOrder.Controls.Add(this.MasList);
+            this.PlaceOrder.Controls.Add(this.MatList);
+            this.PlaceOrder.Controls.Add(this.ProdList);
+            this.PlaceOrder.Controls.Add(this.PriceEnd);
+            this.PlaceOrder.Controls.Add(this.OrderBut);
             this.PlaceOrder.Controls.Add(this.label5);
             this.PlaceOrder.Controls.Add(this.label4);
             this.PlaceOrder.Controls.Add(this.label3);
@@ -139,70 +148,54 @@
             this.PlaceOrder.Text = "Оформить заказ";
             this.PlaceOrder.UseVisualStyleBackColor = true;
             // 
-            // comboBox4
+            // TimeProd
             // 
-            this.comboBox4.FormattingEnabled = true;
-            this.comboBox4.Location = new System.Drawing.Point(200, 250);
-            this.comboBox4.Name = "comboBox4";
-            this.comboBox4.Size = new System.Drawing.Size(289, 29);
-            this.comboBox4.TabIndex = 12;
+            this.TimeProd.Location = new System.Drawing.Point(200, 202);
+            this.TimeProd.Name = "TimeProd";
+            this.TimeProd.Size = new System.Drawing.Size(289, 29);
+            this.TimeProd.TabIndex = 10;
             // 
-            // label10
+            // MasList
             // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(26, 253);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 21);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Выберите клиента";
+            this.MasList.FormattingEnabled = true;
+            this.MasList.Location = new System.Drawing.Point(200, 118);
+            this.MasList.Name = "MasList";
+            this.MasList.Size = new System.Drawing.Size(289, 29);
+            this.MasList.TabIndex = 9;
             // 
-            // textBox3
+            // MatList
             // 
-            this.textBox3.Location = new System.Drawing.Point(200, 202);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(289, 29);
-            this.textBox3.TabIndex = 10;
+            this.MatList.FormattingEnabled = true;
+            this.MatList.Location = new System.Drawing.Point(200, 77);
+            this.MatList.Name = "MatList";
+            this.MatList.Size = new System.Drawing.Size(289, 29);
+            this.MatList.TabIndex = 8;
             // 
-            // comboBox3
+            // ProdList
             // 
-            this.comboBox3.FormattingEnabled = true;
-            this.comboBox3.Location = new System.Drawing.Point(200, 118);
-            this.comboBox3.Name = "comboBox3";
-            this.comboBox3.Size = new System.Drawing.Size(289, 29);
-            this.comboBox3.TabIndex = 9;
+            this.ProdList.FormattingEnabled = true;
+            this.ProdList.Location = new System.Drawing.Point(200, 40);
+            this.ProdList.Name = "ProdList";
+            this.ProdList.Size = new System.Drawing.Size(289, 29);
+            this.ProdList.TabIndex = 7;
             // 
-            // comboBox2
+            // PriceEnd
             // 
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(200, 77);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(289, 29);
-            this.comboBox2.TabIndex = 8;
+            this.PriceEnd.Location = new System.Drawing.Point(200, 161);
+            this.PriceEnd.Name = "PriceEnd";
+            this.PriceEnd.Size = new System.Drawing.Size(289, 29);
+            this.PriceEnd.TabIndex = 6;
             // 
-            // comboBox1
+            // OrderBut
             // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(200, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(289, 29);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(200, 161);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(289, 29);
-            this.textBox2.TabIndex = 6;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(134, 297);
-            this.button1.Margin = new System.Windows.Forms.Padding(5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(258, 37);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Оформить заказ и договор";
-            this.button1.UseVisualStyleBackColor = true;
+            this.OrderBut.Location = new System.Drawing.Point(96, 252);
+            this.OrderBut.Margin = new System.Windows.Forms.Padding(5);
+            this.OrderBut.Name = "OrderBut";
+            this.OrderBut.Size = new System.Drawing.Size(258, 37);
+            this.OrderBut.TabIndex = 5;
+            this.OrderBut.Text = "Оформить заказ";
+            this.OrderBut.UseVisualStyleBackColor = true;
+            this.OrderBut.Click += new System.EventHandler(this.OrderBut_Click);
             // 
             // label5
             // 
@@ -603,7 +596,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(101, 11);
+            this.label6.Location = new System.Drawing.Point(20, 18);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(0, 21);
             this.label6.TabIndex = 1;
@@ -611,7 +604,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(101, 32);
+            this.label7.Location = new System.Drawing.Point(20, 39);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(0, 21);
             this.label7.TabIndex = 2;
@@ -619,26 +612,88 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(101, 53);
+            this.label8.Location = new System.Drawing.Point(20, 60);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(0, 21);
             this.label8.TabIndex = 3;
             // 
-            // pictureBox1
+            // ExitAccount
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(20, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 62);
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
+            this.ExitAccount.Location = new System.Drawing.Point(793, 18);
+            this.ExitAccount.Name = "ExitAccount";
+            this.ExitAccount.Size = new System.Drawing.Size(233, 42);
+            this.ExitAccount.TabIndex = 4;
+            this.ExitAccount.Text = "Выйти из учётной записи";
+            this.ExitAccount.UseVisualStyleBackColor = true;
+            this.ExitAccount.Click += new System.EventHandler(this.ExitAccount_Click);
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(514, 154);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(135, 21);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Дата заключения";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(514, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(141, 21);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Выберите клиента";
+            // 
+            // CliList
+            // 
+            this.CliList.FormattingEnabled = true;
+            this.CliList.Location = new System.Drawing.Point(687, 113);
+            this.CliList.Name = "CliList";
+            this.CliList.Size = new System.Drawing.Size(289, 29);
+            this.CliList.TabIndex = 12;
+            // 
+            // DateContr
+            // 
+            this.DateContr.Location = new System.Drawing.Point(687, 148);
+            this.DateContr.Name = "DateContr";
+            this.DateContr.Size = new System.Drawing.Size(289, 29);
+            this.DateContr.TabIndex = 13;
+            // 
+            // OrderNum
+            // 
+            this.OrderNum.FormattingEnabled = true;
+            this.OrderNum.Location = new System.Drawing.Point(687, 77);
+            this.OrderNum.Name = "OrderNum";
+            this.OrderNum.Size = new System.Drawing.Size(289, 29);
+            this.OrderNum.TabIndex = 15;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(514, 80);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(108, 21);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Номер заказа";
+            // 
+            // ContrBut
+            // 
+            this.ContrBut.Location = new System.Drawing.Point(632, 252);
+            this.ContrBut.Name = "ContrBut";
+            this.ContrBut.Size = new System.Drawing.Size(258, 37);
+            this.ContrBut.TabIndex = 17;
+            this.ContrBut.Text = "Заключить договор";
+            this.ContrBut.UseVisualStyleBackColor = true;
+            this.ContrBut.Click += new System.EventHandler(this.ContrBut_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1038, 604);
+            this.Controls.Add(this.ExitAccount);
             this.Controls.Add(this.Menu);
-            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
@@ -664,7 +719,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.OrdersList)).EndInit();
             this.ContractPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.ContractList)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -682,7 +736,7 @@
         private System.Windows.Forms.TabPage OrdersPage;
         private System.Windows.Forms.TabPage ContractPage;
         private System.Windows.Forms.TabPage Report;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button OrderBut;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
@@ -697,19 +751,16 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Button Delete_Client;
         private System.Windows.Forms.Button All_Client;
         private System.Windows.Forms.Button Upd_Client;
         private System.Windows.Forms.Button Add_Client;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.ComboBox comboBox4;
-        private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.ComboBox comboBox3;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox TimeProd;
+        private System.Windows.Forms.ComboBox MasList;
+        private System.Windows.Forms.ComboBox MatList;
+        private System.Windows.Forms.ComboBox ProdList;
+        private System.Windows.Forms.TextBox PriceEnd;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.CheckBox name_sort;
         private System.Windows.Forms.CheckBox surname_sort;
@@ -724,5 +775,13 @@
         private System.Windows.Forms.ComboBox TypeCombo;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Button SelectType;
+        private System.Windows.Forms.Button ExitAccount;
+        private System.Windows.Forms.Button ContrBut;
+        private System.Windows.Forms.Label label18;
+        private System.Windows.Forms.ComboBox OrderNum;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.DateTimePicker DateContr;
+        private System.Windows.Forms.ComboBox CliList;
+        private System.Windows.Forms.Label label10;
     }
 }

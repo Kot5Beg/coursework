@@ -46,23 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddMaster.Designer.cs">
-      <DependentUpon>AddMaster.cs</DependentUpon>
-    </Compile>
     <Compile Include="AddMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddMaterial.Designer.cs">
       <DependentUpon>AddMaterial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="AddProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AddProduct.Designer.cs">
-      <DependentUpon>AddProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="AddQual.cs">
       <SubType>Form</SubType>
@@ -118,23 +106,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UpdMaster.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdMaster.Designer.cs">
-      <DependentUpon>UpdMaster.cs</DependentUpon>
-    </Compile>
     <Compile Include="UpdMaterial.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="UpdMaterial.Designer.cs">
       <DependentUpon>UpdMaterial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UpdProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="UpdProduct.Designer.cs">
-      <DependentUpon>UpdProduct.cs</DependentUpon>
     </Compile>
     <Compile Include="UpdQual.cs">
       <SubType>Form</SubType>
