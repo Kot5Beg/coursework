@@ -84,9 +84,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(132, 24);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(87, 21);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(248, 21);
+            this.label3.Size = new System.Drawing.Size(367, 30);
             this.label3.TabIndex = 5;
             this.label3.Text = "Введите данные о квалификации";
             // 
@@ -102,8 +103,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AText);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "AddQual";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление квалификации";
             this.ResumeLayout(false);
             this.PerformLayout();

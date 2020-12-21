@@ -30,6 +30,13 @@
         {
             this.Menu = new System.Windows.Forms.TabControl();
             this.PlaceOrder = new System.Windows.Forms.TabPage();
+            this.ContrBut = new System.Windows.Forms.Button();
+            this.label18 = new System.Windows.Forms.Label();
+            this.OrderNum = new System.Windows.Forms.ComboBox();
+            this.label17 = new System.Windows.Forms.Label();
+            this.DateContr = new System.Windows.Forms.DateTimePicker();
+            this.CliList = new System.Windows.Forms.ComboBox();
+            this.label10 = new System.Windows.Forms.Label();
             this.TimeProd = new System.Windows.Forms.TextBox();
             this.MasList = new System.Windows.Forms.ComboBox();
             this.MatList = new System.Windows.Forms.ComboBox();
@@ -78,13 +85,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.ExitAccount = new System.Windows.Forms.Button();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
-            this.CliList = new System.Windows.Forms.ComboBox();
-            this.DateContr = new System.Windows.Forms.DateTimePicker();
-            this.OrderNum = new System.Windows.Forms.ComboBox();
-            this.label18 = new System.Windows.Forms.Label();
-            this.ContrBut = new System.Windows.Forms.Button();
             this.Menu.SuspendLayout();
             this.PlaceOrder.SuspendLayout();
             this.ClientPage.SuspendLayout();
@@ -147,6 +147,66 @@
             this.PlaceOrder.TabIndex = 6;
             this.PlaceOrder.Text = "Оформить заказ";
             this.PlaceOrder.UseVisualStyleBackColor = true;
+            // 
+            // ContrBut
+            // 
+            this.ContrBut.Location = new System.Drawing.Point(632, 252);
+            this.ContrBut.Name = "ContrBut";
+            this.ContrBut.Size = new System.Drawing.Size(258, 37);
+            this.ContrBut.TabIndex = 17;
+            this.ContrBut.Text = "Заключить договор";
+            this.ContrBut.UseVisualStyleBackColor = true;
+            this.ContrBut.Click += new System.EventHandler(this.ContrBut_Click);
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Location = new System.Drawing.Point(514, 80);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(108, 21);
+            this.label18.TabIndex = 16;
+            this.label18.Text = "Номер заказа";
+            // 
+            // OrderNum
+            // 
+            this.OrderNum.FormattingEnabled = true;
+            this.OrderNum.Location = new System.Drawing.Point(687, 77);
+            this.OrderNum.Name = "OrderNum";
+            this.OrderNum.Size = new System.Drawing.Size(289, 29);
+            this.OrderNum.TabIndex = 15;
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(514, 154);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(135, 21);
+            this.label17.TabIndex = 14;
+            this.label17.Text = "Дата заключения";
+            // 
+            // DateContr
+            // 
+            this.DateContr.Location = new System.Drawing.Point(687, 148);
+            this.DateContr.Name = "DateContr";
+            this.DateContr.Size = new System.Drawing.Size(289, 29);
+            this.DateContr.TabIndex = 13;
+            // 
+            // CliList
+            // 
+            this.CliList.FormattingEnabled = true;
+            this.CliList.Location = new System.Drawing.Point(687, 113);
+            this.CliList.Name = "CliList";
+            this.CliList.Size = new System.Drawing.Size(289, 29);
+            this.CliList.TabIndex = 12;
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(514, 116);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(141, 21);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "Выберите клиента";
             // 
             // TimeProd
             // 
@@ -315,7 +375,7 @@
             // 
             this.Delete_Client.Location = new System.Drawing.Point(19, 430);
             this.Delete_Client.Name = "Delete_Client";
-            this.Delete_Client.Size = new System.Drawing.Size(383, 42);
+            this.Delete_Client.Size = new System.Drawing.Size(204, 42);
             this.Delete_Client.TabIndex = 6;
             this.Delete_Client.Text = " Удалить";
             this.Delete_Client.UseVisualStyleBackColor = true;
@@ -325,7 +385,7 @@
             // 
             this.All_Client.Location = new System.Drawing.Point(19, 382);
             this.All_Client.Name = "All_Client";
-            this.All_Client.Size = new System.Drawing.Size(383, 42);
+            this.All_Client.Size = new System.Drawing.Size(204, 42);
             this.All_Client.TabIndex = 5;
             this.All_Client.Text = "Обновить";
             this.All_Client.UseVisualStyleBackColor = true;
@@ -335,7 +395,7 @@
             // 
             this.Upd_Client.Location = new System.Drawing.Point(19, 334);
             this.Upd_Client.Name = "Upd_Client";
-            this.Upd_Client.Size = new System.Drawing.Size(383, 42);
+            this.Upd_Client.Size = new System.Drawing.Size(204, 42);
             this.Upd_Client.TabIndex = 4;
             this.Upd_Client.Text = "Изменить";
             this.Upd_Client.UseVisualStyleBackColor = true;
@@ -345,7 +405,7 @@
             // 
             this.Add_Client.Location = new System.Drawing.Point(19, 286);
             this.Add_Client.Name = "Add_Client";
-            this.Add_Client.Size = new System.Drawing.Size(383, 42);
+            this.Add_Client.Size = new System.Drawing.Size(204, 42);
             this.Add_Client.TabIndex = 3;
             this.Add_Client.Text = "Добавить";
             this.Add_Client.UseVisualStyleBackColor = true;
@@ -354,7 +414,7 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(184, 17);
+            this.label9.Location = new System.Drawing.Point(79, 17);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(54, 21);
             this.label9.TabIndex = 2;
@@ -365,17 +425,18 @@
             this.SearchText.Location = new System.Drawing.Point(10, 43);
             this.SearchText.Margin = new System.Windows.Forms.Padding(5);
             this.SearchText.Name = "SearchText";
-            this.SearchText.Size = new System.Drawing.Size(392, 29);
+            this.SearchText.Size = new System.Drawing.Size(213, 29);
             this.SearchText.TabIndex = 1;
             this.SearchText.TextChanged += new System.EventHandler(this.SearchText_TextChanged);
             // 
             // ClientList
             // 
+            this.ClientList.BackgroundColor = System.Drawing.Color.White;
             this.ClientList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ClientList.Location = new System.Drawing.Point(412, 10);
+            this.ClientList.Location = new System.Drawing.Point(231, 5);
             this.ClientList.Margin = new System.Windows.Forms.Padding(5);
             this.ClientList.Name = "ClientList";
-            this.ClientList.Size = new System.Drawing.Size(585, 462);
+            this.ClientList.Size = new System.Drawing.Size(766, 472);
             this.ClientList.TabIndex = 0;
             // 
             // ProductPage
@@ -402,9 +463,9 @@
             // 
             // SelectType
             // 
-            this.SelectType.Location = new System.Drawing.Point(81, 154);
+            this.SelectType.Location = new System.Drawing.Point(67, 194);
             this.SelectType.Name = "SelectType";
-            this.SelectType.Size = new System.Drawing.Size(103, 36);
+            this.SelectType.Size = new System.Drawing.Size(129, 31);
             this.SelectType.TabIndex = 14;
             this.SelectType.Text = "Выбрать";
             this.SelectType.UseVisualStyleBackColor = true;
@@ -413,7 +474,7 @@
             // AlphaSort
             // 
             this.AlphaSort.AutoSize = true;
-            this.AlphaSort.Location = new System.Drawing.Point(24, 249);
+            this.AlphaSort.Location = new System.Drawing.Point(24, 420);
             this.AlphaSort.Name = "AlphaSort";
             this.AlphaSort.Size = new System.Drawing.Size(88, 25);
             this.AlphaSort.TabIndex = 13;
@@ -424,7 +485,7 @@
             // TimeProdSort
             // 
             this.TimeProdSort.AutoSize = true;
-            this.TimeProdSort.Location = new System.Drawing.Point(24, 217);
+            this.TimeProdSort.Location = new System.Drawing.Point(24, 388);
             this.TimeProdSort.Name = "TimeProdSort";
             this.TimeProdSort.Size = new System.Drawing.Size(174, 25);
             this.TimeProdSort.TabIndex = 12;
@@ -435,7 +496,7 @@
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Location = new System.Drawing.Point(20, 193);
+            this.label16.Location = new System.Drawing.Point(65, 355);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(96, 21);
             this.label16.TabIndex = 11;
@@ -452,7 +513,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(20, 110);
+            this.label14.Location = new System.Drawing.Point(6, 162);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(98, 21);
             this.label14.TabIndex = 8;
@@ -461,7 +522,7 @@
             // TypeCombo
             // 
             this.TypeCombo.FormattingEnabled = true;
-            this.TypeCombo.Location = new System.Drawing.Point(140, 107);
+            this.TypeCombo.Location = new System.Drawing.Point(145, 159);
             this.TypeCombo.Name = "TypeCombo";
             this.TypeCombo.Size = new System.Drawing.Size(121, 29);
             this.TypeCombo.TabIndex = 7;
@@ -470,7 +531,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(18, 87);
+            this.label13.Location = new System.Drawing.Point(84, 130);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(98, 21);
             this.label13.TabIndex = 6;
@@ -479,7 +540,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(38, 30);
+            this.label12.Location = new System.Drawing.Point(96, 10);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(54, 21);
             this.label12.TabIndex = 3;
@@ -487,19 +548,20 @@
             // 
             // spt
             // 
-            this.spt.Location = new System.Drawing.Point(191, 27);
+            this.spt.Location = new System.Drawing.Point(8, 34);
             this.spt.Name = "spt";
-            this.spt.Size = new System.Drawing.Size(764, 29);
+            this.spt.Size = new System.Drawing.Size(260, 29);
             this.spt.TabIndex = 2;
             this.spt.TextChanged += new System.EventHandler(this.spt_TextChanged);
             // 
             // ProductList
             // 
+            this.ProductList.BackgroundColor = System.Drawing.Color.White;
             this.ProductList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.ProductList.Location = new System.Drawing.Point(276, 78);
+            this.ProductList.Location = new System.Drawing.Point(276, 10);
             this.ProductList.Margin = new System.Windows.Forms.Padding(5);
             this.ProductList.Name = "ProductList";
-            this.ProductList.Size = new System.Drawing.Size(731, 394);
+            this.ProductList.Size = new System.Drawing.Size(721, 462);
             this.ProductList.TabIndex = 0;
             // 
             // MaterialPage
@@ -515,11 +577,12 @@
             // 
             // MaterialList
             // 
+            this.MaterialList.BackgroundColor = System.Drawing.Color.White;
             this.MaterialList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.MaterialList.Location = new System.Drawing.Point(5, 11);
+            this.MaterialList.Location = new System.Drawing.Point(274, 5);
             this.MaterialList.Margin = new System.Windows.Forms.Padding(5);
             this.MaterialList.Name = "MaterialList";
-            this.MaterialList.Size = new System.Drawing.Size(726, 463);
+            this.MaterialList.Size = new System.Drawing.Size(726, 469);
             this.MaterialList.TabIndex = 0;
             // 
             // TypePage
@@ -535,11 +598,12 @@
             // 
             // TypeList
             // 
+            this.TypeList.BackgroundColor = System.Drawing.Color.White;
             this.TypeList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.TypeList.Location = new System.Drawing.Point(167, 28);
+            this.TypeList.Location = new System.Drawing.Point(301, 5);
             this.TypeList.Margin = new System.Windows.Forms.Padding(5);
             this.TypeList.Name = "TypeList";
-            this.TypeList.Size = new System.Drawing.Size(525, 507);
+            this.TypeList.Size = new System.Drawing.Size(699, 472);
             this.TypeList.TabIndex = 0;
             // 
             // OrdersPage
@@ -556,11 +620,12 @@
             // 
             // OrdersList
             // 
+            this.OrdersList.BackgroundColor = System.Drawing.Color.White;
             this.OrdersList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.OrdersList.Location = new System.Drawing.Point(9, 10);
+            this.OrdersList.Location = new System.Drawing.Point(4, 5);
             this.OrdersList.Margin = new System.Windows.Forms.Padding(5);
             this.OrdersList.Name = "OrdersList";
-            this.OrdersList.Size = new System.Drawing.Size(902, 575);
+            this.OrdersList.Size = new System.Drawing.Size(998, 472);
             this.OrdersList.TabIndex = 0;
             // 
             // ContractPage
@@ -576,11 +641,12 @@
             // 
             // ContractList
             // 
+            this.ContractList.BackgroundColor = System.Drawing.Color.White;
             this.ContractList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ContractList.Location = new System.Drawing.Point(5, 5);
             this.ContractList.Margin = new System.Windows.Forms.Padding(5);
             this.ContractList.Name = "ContractList";
-            this.ContractList.Size = new System.Drawing.Size(911, 585);
+            this.ContractList.Size = new System.Drawing.Size(995, 469);
             this.ContractList.TabIndex = 0;
             // 
             // Report
@@ -627,66 +693,6 @@
             this.ExitAccount.UseVisualStyleBackColor = true;
             this.ExitAccount.Click += new System.EventHandler(this.ExitAccount_Click);
             // 
-            // label17
-            // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(514, 154);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(135, 21);
-            this.label17.TabIndex = 14;
-            this.label17.Text = "Дата заключения";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(514, 116);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(141, 21);
-            this.label10.TabIndex = 11;
-            this.label10.Text = "Выберите клиента";
-            // 
-            // CliList
-            // 
-            this.CliList.FormattingEnabled = true;
-            this.CliList.Location = new System.Drawing.Point(687, 113);
-            this.CliList.Name = "CliList";
-            this.CliList.Size = new System.Drawing.Size(289, 29);
-            this.CliList.TabIndex = 12;
-            // 
-            // DateContr
-            // 
-            this.DateContr.Location = new System.Drawing.Point(687, 148);
-            this.DateContr.Name = "DateContr";
-            this.DateContr.Size = new System.Drawing.Size(289, 29);
-            this.DateContr.TabIndex = 13;
-            // 
-            // OrderNum
-            // 
-            this.OrderNum.FormattingEnabled = true;
-            this.OrderNum.Location = new System.Drawing.Point(687, 77);
-            this.OrderNum.Name = "OrderNum";
-            this.OrderNum.Size = new System.Drawing.Size(289, 29);
-            this.OrderNum.TabIndex = 15;
-            // 
-            // label18
-            // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(514, 80);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(108, 21);
-            this.label18.TabIndex = 16;
-            this.label18.Text = "Номер заказа";
-            // 
-            // ContrBut
-            // 
-            this.ContrBut.Location = new System.Drawing.Point(632, 252);
-            this.ContrBut.Name = "ContrBut";
-            this.ContrBut.Size = new System.Drawing.Size(258, 37);
-            this.ContrBut.TabIndex = 17;
-            this.ContrBut.Text = "Заключить договор";
-            this.ContrBut.UseVisualStyleBackColor = true;
-            this.ContrBut.Click += new System.EventHandler(this.ContrBut_Click);
-            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
@@ -698,9 +704,11 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(5);
             this.Name = "Main";
-            this.Text = "Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Оформление заказов на изготовление ювелирных изделий";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Menu.ResumeLayout(false);
             this.PlaceOrder.ResumeLayout(false);

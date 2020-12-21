@@ -197,9 +197,10 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(140, 21);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(91, 9);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(212, 21);
+            this.label9.Size = new System.Drawing.Size(309, 30);
             this.label9.TabIndex = 17;
             this.label9.Text = "Введите данные менеджера";
             // 
@@ -227,8 +228,10 @@
             this.Controls.Add(this.NameText);
             this.Controls.Add(this.SurnameText);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Add_Manager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Добавление менеджера";
             this.ResumeLayout(false);
             this.PerformLayout();

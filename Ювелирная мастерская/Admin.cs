@@ -298,5 +298,41 @@ namespace Ювелирная_мастерская
                 MessageBox.Show("Ошибка удаления");
             }
         }
+
+        private void ManagerSearch_TextChanged(object sender, EventArgs e)
+        {
+            string manager = "SELECT * FROM MANAGERS WHERE CONCAT (MANAGER_SURNAME, MANAGER_NAME, MANAGER_PATRONYMIC, MANAGER_ADDRESS, MANAGER_PHONE) LIKE '%" + ManagerSearch.Text + "%' ";
+            Main.Loading(manager, ManagerList);
+        }
+
+        private void MasterSearch_TextChanged(object sender, EventArgs e)
+        {
+            string master = "SELECT * FROM MASTERS WHERE CONCAT (MAS_SURNAME, MAS_NAME, MAS_PATRONYMIC, MAS_ADDRESS, MAS_NUMBER) LIKE '%" + MasterSearch.Text + "%' ";
+            Main.Loading(master, MasterList);
+        }
+
+        private void QualSearch_TextChanged(object sender, EventArgs e)
+        {
+            string qual = "SELECT * FROM QUALIFICATION WHERE CONCAT (APPELATION, Q_POWER) LIKE '%" + QualSearch.Text + "%' ";
+            Main.Loading(qual, QualList);
+        }
+
+        private void ProductSearch_TextChanged(object sender, EventArgs e)
+        {
+            string product = "SELECT * FROM PRODUCT WHERE CONCAT (APPELATION, P_TYPE,TIME_PROD ) LIKE '%" + ProductSearch.Text + "%' ";
+            Main.Loading(product, ProductList);
+        }
+
+        private void MaterialSearch_TextChanged(object sender, EventArgs e)
+        {
+            string material = "SELECT * FROM MATERIALS WHERE CONCAT (APPELATION, PRICE_GRAM,QUANTITY ) LIKE '%" + MaterialSearch.Text + "%' ";
+            Main.Loading(material, MaterialList);
+        }
+
+        private void TypeSearch_TextChanged(object sender, EventArgs e)
+        {
+            string type = "SELECT * FROM PRODUCT_TYPE WHERE NAME_TYPE LIKE '%" + TypeSearch.Text + "%' ";
+            Main.Loading(type, TypeList);
+        }
     }
 }

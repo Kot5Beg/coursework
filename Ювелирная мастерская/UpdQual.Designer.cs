@@ -39,17 +39,20 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(258, 70);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(173, 9);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(176, 13);
+            this.label3.Size = new System.Drawing.Size(385, 30);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Введите данные о квалификации";
+            this.label3.Text = "Измените данные о квалификации";
             // 
             // AddButQual
             // 
-            this.AddButQual.Location = new System.Drawing.Point(327, 337);
+            this.AddButQual.Location = new System.Drawing.Point(271, 352);
+            this.AddButQual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddButQual.Name = "AddButQual";
-            this.AddButQual.Size = new System.Drawing.Size(119, 44);
+            this.AddButQual.Size = new System.Drawing.Size(178, 48);
             this.AddButQual.TabIndex = 10;
             this.AddButQual.Text = "Сохранить";
             this.AddButQual.UseVisualStyleBackColor = true;
@@ -57,52 +60,58 @@
             // 
             // PText
             // 
-            this.PText.Location = new System.Drawing.Point(279, 178);
-            this.PText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.PText.Location = new System.Drawing.Point(189, 98);
+            this.PText.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.PText.Multiline = true;
             this.PText.Name = "PText";
-            this.PText.Size = new System.Drawing.Size(367, 151);
+            this.PText.Size = new System.Drawing.Size(548, 241);
             this.PText.TabIndex = 9;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(155, 178);
+            this.label2.Location = new System.Drawing.Point(13, 101);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 13);
+            this.label2.Size = new System.Drawing.Size(102, 21);
             this.label2.TabIndex = 8;
             this.label2.Text = "Полномочия";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(155, 129);
+            this.label1.Location = new System.Drawing.Point(13, 59);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(117, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "Наименование";
             // 
             // AText
             // 
-            this.AText.Location = new System.Drawing.Point(279, 126);
-            this.AText.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AText.Location = new System.Drawing.Point(189, 56);
+            this.AText.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.AText.Name = "AText";
-            this.AText.Size = new System.Drawing.Size(367, 20);
+            this.AText.Size = new System.Drawing.Size(548, 29);
             this.AText.TabIndex = 6;
             // 
             // UpdQual
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(751, 416);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.AddButQual);
             this.Controls.Add(this.PText);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.AText);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UpdQual";
-            this.Text = "UpdQual";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Изменение данных о квалификации";
             this.ResumeLayout(false);
             this.PerformLayout();
 

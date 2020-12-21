@@ -44,7 +44,7 @@
             // 
             // Save_Client
             // 
-            this.Save_Client.Location = new System.Drawing.Point(130, 404);
+            this.Save_Client.Location = new System.Drawing.Point(144, 391);
             this.Save_Client.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Save_Client.Name = "Save_Client";
             this.Save_Client.Size = new System.Drawing.Size(112, 37);
@@ -161,6 +161,7 @@
             this.Controls.Add(this.Surname_Client);
             this.Controls.Add(this.Save_Client);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "Add_Client";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

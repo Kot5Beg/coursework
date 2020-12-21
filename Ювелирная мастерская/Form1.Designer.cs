@@ -51,11 +51,12 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(121, 24);
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.Location = new System.Drawing.Point(70, 19);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(212, 21);
+            this.label9.Size = new System.Drawing.Size(327, 30);
             this.label9.TabIndex = 35;
-            this.label9.Text = "Введите данные менеджера";
+            this.label9.Text = "Измените данные менеджера";
             // 
             // UpdManagerBut
             // 
@@ -227,8 +228,10 @@
             this.Controls.Add(this.NameText);
             this.Controls.Add(this.SurnameText);
             this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UpdManager";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Изменение данных о менеджере";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -86,6 +86,7 @@
             // 
             this.ClearBox.AutoSize = true;
             this.ClearBox.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClearBox.ForeColor = System.Drawing.Color.SteelBlue;
             this.ClearBox.Location = new System.Drawing.Point(116, 290);
             this.ClearBox.Name = "ClearBox";
             this.ClearBox.Size = new System.Drawing.Size(111, 20);
@@ -97,6 +98,7 @@
             // 
             this.PassEye.AutoSize = true;
             this.PassEye.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PassEye.ForeColor = System.Drawing.Color.SteelBlue;
             this.PassEye.Location = new System.Drawing.Point(53, 234);
             this.PassEye.Name = "PassEye";
             this.PassEye.Size = new System.Drawing.Size(128, 20);
@@ -107,9 +109,10 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(52, 18);
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.Location = new System.Drawing.Point(12, 22);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(258, 25);
+            this.label5.Size = new System.Drawing.Size(331, 30);
             this.label5.TabIndex = 7;
             this.label5.Text = "Представьтесь, пожалуйста!";
             // 
@@ -138,6 +141,7 @@
             this.Controls.Add(this.LoginText);
             this.Controls.Add(this.Entry);
             this.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Margin = new System.Windows.Forms.Padding(6);
             this.Name = "Security";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

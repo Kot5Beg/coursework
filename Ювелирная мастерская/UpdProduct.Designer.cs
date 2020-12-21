@@ -41,17 +41,20 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(119, 9);
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.Location = new System.Drawing.Point(148, 9);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(159, 13);
+            this.label4.Size = new System.Drawing.Size(327, 30);
             this.label4.TabIndex = 15;
             this.label4.Text = "Измените данные об изделии";
             // 
             // UpdProductBut
             // 
-            this.UpdProductBut.Location = new System.Drawing.Point(166, 134);
+            this.UpdProductBut.Location = new System.Drawing.Point(249, 216);
+            this.UpdProductBut.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.UpdProductBut.Name = "UpdProductBut";
-            this.UpdProductBut.Size = new System.Drawing.Size(75, 23);
+            this.UpdProductBut.Size = new System.Drawing.Size(112, 37);
             this.UpdProductBut.TabIndex = 14;
             this.UpdProductBut.Text = "Сохранить";
             this.UpdProductBut.UseVisualStyleBackColor = true;
@@ -60,57 +63,63 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(11, 102);
+            this.label3.Location = new System.Drawing.Point(16, 165);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 13);
+            this.label3.Size = new System.Drawing.Size(215, 21);
             this.label3.TabIndex = 13;
             this.label3.Text = "Время изготовления (в днях)";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(11, 74);
+            this.label2.Location = new System.Drawing.Point(16, 120);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(26, 13);
+            this.label2.Size = new System.Drawing.Size(36, 21);
             this.label2.TabIndex = 12;
             this.label2.Text = "Тип";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(11, 47);
+            this.label1.Location = new System.Drawing.Point(16, 76);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(83, 13);
+            this.label1.Size = new System.Drawing.Size(117, 21);
             this.label1.TabIndex = 11;
             this.label1.Text = "Наименование";
             // 
             // TimeProd
             // 
-            this.TimeProd.Location = new System.Drawing.Point(199, 98);
+            this.TimeProd.Location = new System.Drawing.Point(298, 158);
+            this.TimeProd.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TimeProd.Name = "TimeProd";
-            this.TimeProd.Size = new System.Drawing.Size(197, 20);
+            this.TimeProd.Size = new System.Drawing.Size(294, 29);
             this.TimeProd.TabIndex = 10;
             // 
             // TypeCombo
             // 
             this.TypeCombo.FormattingEnabled = true;
-            this.TypeCombo.Location = new System.Drawing.Point(199, 71);
+            this.TypeCombo.Location = new System.Drawing.Point(298, 115);
+            this.TypeCombo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TypeCombo.Name = "TypeCombo";
-            this.TypeCombo.Size = new System.Drawing.Size(197, 21);
+            this.TypeCombo.Size = new System.Drawing.Size(294, 29);
             this.TypeCombo.TabIndex = 9;
             // 
             // Appelation
             // 
-            this.Appelation.Location = new System.Drawing.Point(199, 44);
+            this.Appelation.Location = new System.Drawing.Point(298, 71);
+            this.Appelation.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Appelation.Name = "Appelation";
-            this.Appelation.Size = new System.Drawing.Size(197, 20);
+            this.Appelation.Size = new System.Drawing.Size(294, 29);
             this.Appelation.TabIndex = 8;
             // 
             // UpdProduct
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 169);
+            this.ClientSize = new System.Drawing.Size(622, 273);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.UpdProductBut);
             this.Controls.Add(this.label3);
@@ -119,8 +128,12 @@
             this.Controls.Add(this.TimeProd);
             this.Controls.Add(this.TypeCombo);
             this.Controls.Add(this.Appelation);
+            this.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UpdProduct";
-            this.Text = "Изменение продукта";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Изменение данных об изделии";
             this.ResumeLayout(false);
             this.PerformLayout();
 
