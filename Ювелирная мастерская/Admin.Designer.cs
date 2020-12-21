@@ -278,6 +278,7 @@
             this.Delete_Product.TabIndex = 3;
             this.Delete_Product.Text = "Удалить";
             this.Delete_Product.UseVisualStyleBackColor = true;
+            this.Delete_Product.Click += new System.EventHandler(this.Delete_Product_Click);
             // 
             // Update_Product
             // 
@@ -287,6 +288,7 @@
             this.Update_Product.TabIndex = 2;
             this.Update_Product.Text = "Изменить";
             this.Update_Product.UseVisualStyleBackColor = true;
+            this.Update_Product.Click += new System.EventHandler(this.Update_Product_Click);
             // 
             // Add_Product
             // 

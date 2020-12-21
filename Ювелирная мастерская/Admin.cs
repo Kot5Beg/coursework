@@ -80,13 +80,20 @@ namespace Ювелирная_мастерская
 
         private void Delete_Manager_Click(object sender, EventArgs e)
         {
-            Manager.DeleteManager(ManagerList);
-            MessageBox.Show("Данные менеджера удалены из базы");
-        }
-
-        private void MasterList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    Manager.DeleteManager(ManagerList);
+                    MessageBox.Show("Данные менеджера удалены из базы");
+                    Main.Loading("SELECT * FROM MANAGERS", ManagerList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+            
         }
 
         private void Add_Master_Click(object sender, EventArgs e)
@@ -159,32 +166,67 @@ namespace Ювелирная_мастерская
 
         private void Delete_Qual_Click(object sender, EventArgs e)
         {
-            DataBaseWork.OpenCon();
-            var num = (int)QualList.CurrentRow.Cells["ID"].Value;
-            SqlCommand sc = new SqlCommand(String.Format("DELETE FROM QUALIFICATION WHERE ID = {0}", num), DataBaseWork.Con);
-            sc.ExecuteNonQuery();
-            DataBaseWork.CloseConnection();
-            MessageBox.Show("Квалификация удалена");
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DataBaseWork.OpenCon();
+                    var num = (int)QualList.CurrentRow.Cells["ID"].Value;
+                    SqlCommand sc = new SqlCommand(String.Format("DELETE FROM QUALIFICATION WHERE ID = {0}", num), DataBaseWork.Con);
+                    sc.ExecuteNonQuery();
+                    DataBaseWork.CloseConnection();
+                    MessageBox.Show("Квалификация удалена");
+                    Main.Loading("SELECT * FROM QUALIFICATION", MasterList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DataBaseWork.OpenCon();
-            var num = (int)MaterialList.CurrentRow.Cells["ID"].Value;
-            SqlCommand sc = new SqlCommand(String.Format("DELETE FROM MATERIALS WHERE ID = {0}", num), DataBaseWork.Con);
-            sc.ExecuteNonQuery();
-            DataBaseWork.CloseConnection();
-            MessageBox.Show("Материал удален");
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DataBaseWork.OpenCon();
+                    var num = (int)MaterialList.CurrentRow.Cells["ID"].Value;
+                    SqlCommand sc = new SqlCommand(String.Format("DELETE FROM MATERIALS WHERE ID = {0}", num), DataBaseWork.Con);
+                    sc.ExecuteNonQuery();
+                    DataBaseWork.CloseConnection();
+                    MessageBox.Show("Материал удален");
+                    Main.Loading("SELECT * FROM MATERIALS", MaterialList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            DataBaseWork.OpenCon();
-            var num = (int)TypeList.CurrentRow.Cells["ID"].Value;
-            SqlCommand sc = new SqlCommand(String.Format("DELETE FROM PRODUCT_TYPE WHERE ID = {0}", num), DataBaseWork.Con);
-            sc.ExecuteNonQuery();
-            DataBaseWork.CloseConnection();
-            MessageBox.Show("Тип изделий удален");
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DataBaseWork.OpenCon();
+                    var num = (int)TypeList.CurrentRow.Cells["ID"].Value;
+                    SqlCommand sc = new SqlCommand(String.Format("DELETE FROM PRODUCT_TYPE WHERE ID = {0}", num), DataBaseWork.Con);
+                    sc.ExecuteNonQuery();
+                    DataBaseWork.CloseConnection();
+                    MessageBox.Show("Тип изделий удален");
+                    Main.Loading("SELECT * FROM PRODUCT_TYPE", TypeList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+            
         }
 
         private void Update_Master_Click(object sender, EventArgs e)
@@ -205,12 +247,56 @@ namespace Ювелирная_мастерская
 
         private void Delete_Master_Click(object sender, EventArgs e)
         {
-            DataBaseWork.OpenCon();
-            var num = (int)MasterList.CurrentRow.Cells["ID"].Value;
-            SqlCommand sc = new SqlCommand(String.Format("DELETE FROM MASTERS WHERE ID = {0}", num), DataBaseWork.Con);
-            sc.ExecuteNonQuery();
-            DataBaseWork.CloseConnection();
-            MessageBox.Show("Данные о мастере успешно удалены");
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DataBaseWork.OpenCon();
+                    var num = (int)MasterList.CurrentRow.Cells["ID"].Value;
+                    SqlCommand sc = new SqlCommand(String.Format("DELETE FROM MASTERS WHERE ID = {0}", num), DataBaseWork.Con);
+                    sc.ExecuteNonQuery();
+                    DataBaseWork.CloseConnection();
+                    MessageBox.Show("Данные о мастере успешно удалены");
+                    Main.Loading("SELECT * FROM MASTERS", MasterList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
+        }
+
+        private void Update_Product_Click(object sender, EventArgs e)
+        {
+            List<string> product = new List<string>();
+            var number = ProductList.CurrentCell.RowIndex;
+            DataGridViewRow row = ProductList.Rows[number];
+            UpdProduct um = new UpdProduct(row.Cells[0].Value.ToString(),
+                row.Cells[1].Value.ToString(),
+                row.Cells[2].Value.ToString(),
+                row.Cells[3].Value.ToString());
+            um.ShowDialog();
+        }
+
+        private void Delete_Product_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (MessageBox.Show("Вы точно хотите удалить запись?", "Удаление", MessageBoxButtons.OKCancel, MessageBoxIcon.Question) == DialogResult.OK)
+                {
+                    DataBaseWork.OpenCon();
+                    var num = (int)ProductList.CurrentRow.Cells["ID"].Value;
+                    SqlCommand sc = new SqlCommand(String.Format("DELETE FROM PRODUCT WHERE ID = {0}", num), DataBaseWork.Con);
+                    sc.ExecuteNonQuery();
+                    DataBaseWork.CloseConnection();
+                    MessageBox.Show("Изделие удалено.");
+                    Main.Loading("SELECT * FROM PRODUCT", ProductList);
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Ошибка удаления");
+            }
         }
     }
 }
